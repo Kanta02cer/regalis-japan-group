@@ -1,45 +1,50 @@
 - id: inoue-kanta
   name: 井上 幹太
   name_en: Kanta Inoue
-  role: 代表取締役
-  role_en: CEO & Founder
+  position: 機会建築家 / Opportunity Architect
+  role: 代表取締役 CEO & Founder
+  tagline: "あなたが主役の時代をつくる。"
+  story_short: "12年間の不登校が、私を機会建築家にした。"
   bio: |
-    フィンランド・Aalto Universityにてデザイン思考を修め、アルヴァ・アアルトの「自然と文化が調和する個性表現」に影響を受ける。帰国後、京都の職人文化と東京のモダンな審美眼を融合させる事業構想を持ち、Regalis Japan Group株式会社を創業。オーダースーツ事業を起点に、AI/DXコンサルティング・Web制作・学生支援など多角経営を推進。「経営と現場と次世代を、テクノロジーと品格でつなぐ」をグループの基軸に据える。
-  bio_short: Aalto大学でデザイン思考を修め帰国後に創業。京都の職人文化と東京のモダン美学を融合させた多角経営を推進。
-  businesses:
-    - order-suits
-    - dx-consulting
-    - web-development
-    - talent
+    12歳から12年間、不登校を経験。学校の外で経済・テクノロジー・デザインを独学し、
+    14歳でWebライターとして独立。S高等学校では国際経済学オリンピックで世界3位を獲得。
+    J-StarX Finland第1期としてAalto大学で起業家精神を学ぶ。
+    学生団体FIN/School.（金融教育）・ESF（AI教育）を創業し、UNION CTO（学生700名連合）に就任。
+    Google AI Ambassador第1期として認定後、20歳でRegalis Japan Groupを設立。
+    「機会が届いていない場所に、機会を設計し直す」をミッションに掲げる機会建築家。
+  bio_short: 12年の不登校から国際経済オリンピック世界3位・Google AI Ambassador第1期を経て、20歳で持株会社を設立。機会建築家として企業と次世代の変革を設計する。
+  photo: /images/_顔写真_ビジネス用黒書-背景白.png
+  photo_main: /images/_顔写真_ビジネス用黒服-背景白.png
+  photo_suits: /images/kanta_kyoto-suits.jpg
+  photo_formal: /images/【顔写真】井上幹太_スイス国連.jpg
+  achievements:
+    - label: "国際経済学オリンピック"
+      value: "世界3位"
+    - label: "J-StarX Finland"
+      value: "第1期採択"
+    - label: "Google AI Ambassador"
+      value: "第1期認定"
+    - label: "Regalis Japan Group 設立"
+      value: "20歳"
+  timeline:
+    - age: "12歳"
+      title: "不登校、始まる。"
+      body: "12年間、学校に通えなかった。それが私の最初の「機会の不在」との出会い。"
+    - age: "14歳"
+      title: "Webライターとして独立。"
+      body: "自分に経済的機会を作るため、独学でライティングを習得し収益化。最初の機会建築。"
+    - age: "17歳"
+      title: "S高等学校 入学。国際経済学オリンピック 世界3位。"
+      body: "制度外からでも世界舞台に立てることを証明した。"
+    - age: "18歳"
+      title: "J-StarX Finland 第1期採択。Aalto大学へ。"
+      body: "フィンランドで起業家精神と機会設計の哲学を学ぶ。"
+    - age: "19歳"
+      title: "FIN/School.・ESF創業、UNION CTO就任。"
+      body: "金融教育・AI教育の機会を同世代に届ける学生団体を創業。学生700名の連合CTOへ。"
+    - age: "20歳"
+      title: "Google AI Ambassador第1期。Regalis Japan Group設立。"
+      body: "機会建築を法人として恒常化。「あなたが主役の時代をつくる。」という使命のもとに。"
   sns:
     x: https://twitter.com/
     instagram: https://instagram.com/
-  photo: /images/_顔写真_ビジネス用黒服-背景白.png
-  photo_hero: /images/kanta_kyoto-suits.jpg
-  photo_formal: /images/【顔写真】井上幹太_スイス国連.jpg
-
-- id: mishima-daiki
-  name: 三島 大毅
-  name_en: Daiki Mishima
-  role: 取締役
-  role_en: Director
-  bio: |
-    事業開発・販売促進領域を担当。グループの営業戦略・パートナー開拓を統括し、多角事業間のシナジー創出を推進する。
-  bio_short: 事業開発・販売促進領域を統括。グループのパートナー開拓とシナジー創出を担う。
-  businesses:
-    - sales-promotion
-    - media-operation
-  photo: ""
-
-- id: horiuchi-fumito
-  name: 堀内 文翔
-  name_en: Fumito Horiuchi
-  role: 取締役
-  role_en: Director
-  bio: |
-    テクノロジー・デジタル領域を担当。AI/DXコンサルティングおよびWebサイト開発事業の技術面を牽引し、グループ全体のデジタルトランスフォーメーションを推進する。
-  bio_short: AI/DX・Web開発領域を技術面から牽引。グループ全体のデジタル変革を推進する。
-  businesses:
-    - dx-consulting
-    - web-development
-  photo: ""

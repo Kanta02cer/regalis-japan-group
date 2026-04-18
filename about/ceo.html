@@ -1,0 +1,404 @@
+---
+layout: corp
+title: "代表について"
+meta_title: "井上幹太 | 機会建築家 — Regalis Japan Group"
+description: "12年間の不登校から国際経済学オリンピック世界3位・Google AI Ambassador第1期を経て、20歳で持株会社設立。機会建築家・井上幹太の全ストーリー。"
+og_image: /images/【顔写真】井上幹太_スイス国連.jpg
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "井上幹太",
+      "alternateName": "Kanta Inoue",
+      "jobTitle": "代表取締役 CEO & Founder",
+      "description": "機会建築家。12年間の不登校から国際経済学オリンピック世界3位・Google AI Ambassador第1期を経て20歳でRegalis Japan Groupを設立。",
+      "image": "https://regalis-order-suits.com/group/images/【顔写真】井上幹太_スイス国連.jpg",
+      "url": "https://regalis-order-suits.com/group/about/ceo.html",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Regalis Japan Group株式会社"
+      },
+      "award": [
+        "国際経済学オリンピック 世界3位",
+        "J-StarX Finland 第1期採択",
+        "Google AI Ambassador 第1期"
+      ]
+    }
+  }
+  </script>
+---
+
+<!-- ================================================================
+  HERO — 代表ファーストビュー
+  ================================================================ -->
+<section class="ceo-hero">
+  <div class="ceo-hero__bg">
+    <img src="{{ '/images/【顔写真】井上幹太_スイス国連.jpg' | relative_url }}"
+         alt="代表取締役 井上幹太 スイス国連にて"
+         class="ceo-hero__bg-img">
+    <div class="ceo-hero__overlay"></div>
+  </div>
+  <div class="ceo-hero__content corp-container">
+    <div class="reveal">
+      <span class="corp-kicker">代表について</span>
+      <h1 class="ceo-hero__name">井上 幹太</h1>
+      <p class="ceo-hero__name-en">Kanta Inoue</p>
+      <p class="ceo-hero__position">機会建築家 / Opportunity Architect<br>代表取締役 CEO & Founder</p>
+      <blockquote class="ceo-hero__quote">
+        「機会が届いていない場所に、<br>機会を設計し直すこと。」
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+  ポジショニング宣言
+  ================================================================ -->
+<section class="corp-section corp-section--dark">
+  <div class="corp-container">
+    <div style="max-width: 760px; margin: 0 auto;">
+      <div class="reveal">
+        <span class="corp-kicker">なぜ「機会建築家」と名乗るのか</span>
+        <h2 class="corp-h2 corp-h2--light" style="margin-bottom: 40px;">12年の不登校が、<br>私を機会建築家にした。</h2>
+      </div>
+      <div class="ceo-story-text reveal reveal--delay-1">
+        <p>
+          12歳から24歳まで、私は学校に通えなかった。
+          「普通」の場所に居場所がなかった私が学んだことは、
+          <strong>機会は与えられるものではなく、自分で建築するものだ</strong>ということです。
+        </p>
+        <p>
+          14歳でWebライターとして経済的独立を果たし、
+          17歳で国際経済学オリンピックの舞台に立ち、
+          18歳でフィンランドの大学で起業家精神を学び、
+          19歳で金融教育・AI教育の学生団体を創業し、
+          20歳でGoogleに認められ、持株会社を設立しました。
+        </p>
+        <p>
+          この軌跡を一言で表すなら、
+          「機会が届いていない場所に、機会を設計し直し続けた」
+          という物語です。Regalis Japan Groupは、
+          この建築術を企業と次世代に届けるために存在しています。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+  人生タイムライン（詳細版）
+  ================================================================ -->
+<section class="corp-section">
+  <div class="corp-container">
+    <div class="reveal" style="margin-bottom: 64px;">
+      <span class="corp-kicker">人生の軌跡</span>
+      <h2 class="corp-h2 corp-h2--light">機会建築の全史。</h2>
+    </div>
+
+    {% assign ceo = site.data.members | first %}
+    <div class="ceo-timeline">
+      {% for item in ceo.timeline %}
+      <div class="ceo-timeline__item reveal reveal--delay-{{ forloop.index }}">
+        <div class="ceo-timeline__age-col">
+          <div class="ceo-timeline__age">{{ item.age }}</div>
+          <div class="ceo-timeline__line"></div>
+        </div>
+        <div class="ceo-timeline__content">
+          <h3 class="ceo-timeline__title">{{ item.title }}</h3>
+          <p class="ceo-timeline__body">{{ item.body }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+  実績・経歴
+  ================================================================ -->
+<section class="corp-section corp-section--surface">
+  <div class="corp-container">
+    <div class="reveal" style="margin-bottom: 56px;">
+      <span class="corp-kicker">経歴・実績</span>
+      <h2 class="corp-h2 corp-h2--light">機会建築の証左。</h2>
+    </div>
+
+    <div class="ceo-achievements-grid">
+      {% assign ceo = site.data.members | first %}
+      {% for ach in ceo.achievements %}
+      <div class="ceo-achievement reveal reveal--delay-{{ forloop.index }}">
+        <div class="ceo-achievement__label">{{ ach.label }}</div>
+        <div class="ceo-achievement__value">{{ ach.value }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- 写真ギャラリー -->
+    <div class="ceo-photos reveal" style="margin-top: 64px;">
+      <div class="ceo-photo-card">
+        <img src="{{ '/images/kanta_kyoto-suits.jpg' | relative_url }}" alt="井上幹太 京都にて">
+        <span>京都 — スーツ事業の源流へ</span>
+      </div>
+      <div class="ceo-photo-card">
+        <img src="{{ '/images/_顔写真_ビジネス用黒服-背景白.png' | relative_url }}" alt="井上幹太 代表プロフィール写真">
+        <span>代表取締役 プロフィール</span>
+      </div>
+      <div class="ceo-photo-card">
+        <img src="{{ '/images/Student.both.webp' | relative_url }}" alt="Regalis Japan Group 学生との取り組み">
+        <span>学生との取り組み</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+  メディア・登壇実績
+  ================================================================ -->
+<section class="corp-section corp-section--dark">
+  <div class="corp-container" style="max-width: 800px;">
+    <div class="reveal" style="margin-bottom: 48px;">
+      <span class="corp-kicker">メディア・登壇</span>
+      <h2 class="corp-h2 corp-h2--light">言葉で、機会を届ける。</h2>
+    </div>
+
+    <div class="media-list reveal">
+      <div class="media-item">
+        <span class="media-item__type">YouTube</span>
+        <span class="media-item__content">「挑戦を文化に」登壇</span>
+      </div>
+      <div class="media-item">
+        <span class="media-item__type">所属事務所</span>
+        <span class="media-item__content">TIESBRICK</span>
+      </div>
+      <div class="media-item">
+        <span class="media-item__type">講演テーマ</span>
+        <span class="media-item__content">AI×教育 / 不登校×起業 / 次世代リーダーシップ / 機会設計</span>
+      </div>
+      <div class="media-item">
+        <span class="media-item__type">対応形式</span>
+        <span class="media-item__content">取材・インタビュー / 講演・登壇（60〜90分） / コラム・寄稿</span>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;" class="reveal">
+      <a href="{{ '/contact/?type=oratio' | relative_url }}" class="corp-btn corp-btn--gold">取材・登壇依頼はこちら</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+  CTA
+  ================================================================ -->
+<div class="corp-cta-block">
+  <p class="corp-kicker" style="justify-content:center;">まず、話してみてください。</p>
+  <h2 class="corp-cta-block__heading reveal">機会は、対話から建築される。</h2>
+  <p class="corp-cta-block__sub reveal reveal--delay-1">30分の無料相談から始まります。</p>
+  <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;" class="reveal reveal--delay-2">
+    <a href="{{ '/contact/?type=praxis' | relative_url }}" class="corp-btn corp-btn--gold">AI・DX相談をする</a>
+    <a href="{{ '/contact/?type=academia' | relative_url }}" class="corp-btn corp-btn--outline">アンバサダーに参加する</a>
+  </div>
+</div>
+
+<style>
+/* ── CEO HERO ── */
+.ceo-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+.ceo-hero__bg {
+  position: absolute;
+  inset: 0;
+}
+.ceo-hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(30%) contrast(1.05);
+}
+.ceo-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,11,18,0.95) 0%, rgba(8,11,18,0.4) 50%, rgba(8,11,18,0.2) 100%);
+}
+.ceo-hero__content {
+  position: relative;
+  z-index: 1;
+}
+.ceo-hero__name {
+  font-family: var(--ff-serif);
+  font-size: clamp(40px, 6vw, 80px);
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.ceo-hero__name-en {
+  font-family: var(--ff-display);
+  font-size: clamp(12px, 1.5vw, 16px);
+  color: rgba(201,162,75,0.7);
+  letter-spacing: 0.3em;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.ceo-hero__position {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.2em;
+  line-height: 2;
+  margin-bottom: 32px;
+}
+.ceo-hero__quote {
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+  margin: 0;
+  font-family: var(--ff-serif);
+  font-size: clamp(16px, 2vw, 22px);
+  color: rgba(255,255,255,0.8);
+  font-style: normal;
+  line-height: 1.8;
+}
+
+/* ── ストーリーテキスト ── */
+.ceo-story-text p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.65);
+  line-height: 2.3;
+  margin-bottom: 24px;
+}
+.ceo-story-text strong {
+  color: var(--tx-bright);
+  font-weight: 500;
+}
+
+/* ── 詳細タイムライン ── */
+.ceo-timeline {
+  max-width: 760px;
+}
+.ceo-timeline__item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+.ceo-timeline__age-col { display: flex; flex-direction: column; align-items: center; }
+.ceo-timeline__age {
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  padding: 6px 0;
+  white-space: nowrap;
+}
+.ceo-timeline__line {
+  width: 1px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--gold), rgba(201,162,75,0.1));
+  margin-top: 8px;
+}
+.ceo-timeline__title {
+  font-family: var(--ff-serif);
+  font-size: 20px;
+  color: var(--tx-bright);
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.ceo-timeline__body {
+  font-size: 14px;
+  color: var(--tx-sub);
+  line-height: 2;
+}
+
+/* ── 実績グリッド ── */
+.ceo-achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 760px;
+}
+.ceo-achievement {
+  padding: 28px;
+  border: 1px solid var(--line-dark);
+  border-left: 3px solid var(--gold);
+}
+.ceo-achievement__label {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: var(--tx-sub);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.ceo-achievement__value {
+  font-family: var(--ff-serif);
+  font-size: 20px;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+/* ── 写真ギャラリー ── */
+.ceo-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.ceo-photo-card { position: relative; overflow: hidden; }
+.ceo-photo-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(20%);
+  transition: filter var(--dur-mid), transform var(--dur-mid);
+}
+.ceo-photo-card:hover img { filter: grayscale(0%); transform: scale(1.03); }
+.ceo-photo-card span {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 12px 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.1em;
+}
+
+/* ── メディアリスト ── */
+.media-list { display: flex; flex-direction: column; gap: 0; }
+.media-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line-dark);
+  align-items: start;
+}
+.media-item:last-child { border-bottom: none; }
+.media-item__type {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  padding-top: 2px;
+}
+.media-item__content {
+  font-size: 14px;
+  color: var(--tx-sub);
+  line-height: 1.8;
+}
+
+/* ── レスポンシブ ── */
+@media (max-width: 768px) {
+  .ceo-achievements-grid { grid-template-columns: 1fr; }
+  .ceo-photos { grid-template-columns: 1fr; }
+  .ceo-timeline__item { grid-template-columns: 60px 1fr; gap: 16px; }
+  .media-item { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>

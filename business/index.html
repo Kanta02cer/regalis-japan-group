@@ -1,95 +1,349 @@
 ---
 layout: corp
-title: "事業紹介"
-meta_title: "事業紹介 | Regalis Japan Group株式会社"
-description: "Regalis Japan Group株式会社の事業紹介。オーダースーツ・AI/DXコンサルティング・Webサイト開発・販売促進・メディア運営代行・学生支援協会など8つの事業領域。"
+title: "3つの事業"
+meta_title: "3つの事業 | Regalis Japan Group株式会社"
+description: "Regalis Japan Group株式会社の事業紹介。PRAXIS（AI・DXコンサル）・ACADEMIA（学生機会創出）・ORATIO（代表発信・タレント）の3つのフロント事業を軸に展開しています。"
 ---
+
+<style>
+/* ─── Business Index ─── */
+.biz-index-hero {
+  background: var(--corp-void);
+  color: #fff;
+  padding: 120px 24px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.biz-index-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,162,75,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.biz-index-hero__en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(11px, 1.4vw, 13px);
+  letter-spacing: 0.3em;
+  color: var(--corp-gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+.biz-index-hero__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+.biz-index-hero__lead {
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: rgba(255,255,255,0.65);
+  max-width: 600px;
+  margin: 0 auto 48px;
+  line-height: 1.9;
+}
+
+/* Loop visual */
+.biz-loop-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Cormorant Garamond', serif;
+}
+.biz-loop-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.biz-loop-node__label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--corp-gold);
+  text-transform: uppercase;
+}
+.biz-loop-node__name {
+  font-size: clamp(16px, 2.5vw, 22px);
+  color: #fff;
+  font-weight: 400;
+}
+.biz-loop-arrow {
+  font-size: 20px;
+  color: var(--corp-gold);
+  margin: 0 16px;
+  margin-top: -16px;
+}
+
+/* Featured biz cards */
+.biz-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--corp-line);
+}
+@media (max-width: 768px) {
+  .biz-featured-grid { grid-template-columns: 1fr; }
+}
+.biz-featured-card {
+  background: #fff;
+  padding: 56px 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.biz-featured-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent, var(--corp-gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.biz-featured-card:hover::before { transform: scaleX(1); }
+.biz-featured-card__num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: var(--accent, var(--corp-gold));
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.biz-featured-card__brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 400;
+  color: var(--corp-text);
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.biz-featured-card__subtitle {
+  font-size: 12px;
+  color: var(--corp-sub);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+.biz-featured-card__desc {
+  font-size: 14px;
+  color: var(--corp-sub);
+  line-height: 1.9;
+  flex: 1;
+  margin-bottom: 32px;
+}
+.biz-featured-card__loop {
+  font-size: 12px;
+  color: var(--corp-sub);
+  border-top: 1px solid var(--corp-line);
+  padding-top: 20px;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+.biz-featured-card__loop strong {
+  color: var(--accent, var(--corp-gold));
+  font-weight: 500;
+}
+
+/* Background businesses */
+.biz-bg-section {
+  background: var(--corp-ivory);
+  padding: 80px 24px;
+}
+.biz-bg-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--corp-line);
+  margin-top: 48px;
+}
+@media (max-width: 900px) {
+  .biz-bg-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .biz-bg-grid { grid-template-columns: 1fr; }
+}
+.biz-bg-card {
+  background: var(--corp-ivory);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.biz-bg-card__brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--corp-text);
+  letter-spacing: 0.05em;
+}
+.biz-bg-card__title {
+  font-size: 12px;
+  color: var(--corp-sub);
+}
+.biz-bg-card__desc {
+  font-size: 12px;
+  color: var(--corp-sub);
+  line-height: 1.7;
+  margin-top: 4px;
+}
+</style>
 
 <!-- Breadcrumb -->
 <nav class="corp-breadcrumb" aria-label="パンくずリスト">
-  <a href="{{ '/' | relative_url }}">Top</a>
+  <a href="{{ '/' | relative_url }}">トップ</a>
   <span class="corp-breadcrumb__sep">/</span>
-  <span>事業紹介</span>
+  <span>3つの事業</span>
 </nav>
 
-<!-- Page Hero -->
-<div class="corp-page-hero">
-  <div class="corp-page-hero__inner">
-    <p class="corp-page-hero__title-en">Our Business</p>
-    <h1 class="corp-page-hero__title">事業紹介</h1>
-    <p class="corp-page-hero__desc">
-      8つの事業領域が、グループ横断のシナジーで価値を生み出します。
-    </p>
-  </div>
-</div>
+<!-- Hero -->
+<section class="biz-index-hero">
+  <span class="biz-index-hero__en corp-reveal">Our Business</span>
+  <h1 class="biz-index-hero__title corp-reveal" style="--d:0.1s">
+    3つの事業で、<br>機会の循環をつくる。
+  </h1>
+  <p class="biz-index-hero__lead corp-reveal" style="--d:0.2s">
+    PRAXIS・ACADEMIA・ORATIOは、互いに顧客と信頼を循環させる<br>
+    有機的なビジネスモデルです。
+  </p>
 
-<!-- Business Cards -->
-<section class="corp-section corp-section--white" style="padding-top:0;">
-
-  {% for biz in site.data.businesses %}
-  <div id="{{ biz.id }}" style="border-bottom:1px solid var(--corp-line); {% if forloop.last %}border-bottom:none;{% endif %}">
-    <div class="corp-container" style="padding:80px 24px; display:grid; grid-template-columns:{% if forloop.even %}1fr 2fr{% else %}2fr 1fr{% endif %}; gap:80px; align-items:center;">
-
-      <!-- Text (alternating side) -->
-      {% unless forloop.even %}
-      <div>
-        <span class="corp-kicker">{{ forloop.index | prepend: '0' | slice: -2, 2 }} — {{ biz.category | upcase }}</span>
-        <h2 class="corp-h2" style="margin-bottom:16px;">{{ biz.title }}</h2>
-        <div class="corp-divider"></div>
-        <p class="corp-lead" style="margin-top:24px;">{{ biz.description }}</p>
-        <div style="margin-top:40px;">
-          {% if biz.status == 'coming_soon' %}
-            <span class="corp-btn corp-btn--outline" style="opacity:0.5; cursor:not-allowed; color:var(--corp-sub); border-color:var(--corp-line);">準備中</span>
-          {% elsif biz.external %}
-            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
-          {% else %}
-            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
-          {% endif %}
-          <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="margin-left:12px; color:var(--corp-text); border-color:var(--corp-line);">相談する</a>
-        </div>
-      </div>
-      <div style="background:var(--corp-ivory); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; border-radius:4px;">
-        <div style="text-align:center;">
-          <p style="font-family:'Cormorant Garamond',serif; font-size:80px; color:rgba(201,162,75,0.2); line-height:1; font-style:italic;">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</p>
-          <p style="font-family:'Noto Serif JP',serif; font-size:14px; color:var(--corp-sub); letter-spacing:0.1em;">{{ biz.title }}</p>
-        </div>
-      </div>
-      {% else %}
-      <div style="background:var(--corp-ink); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; border-radius:4px;">
-        <div style="text-align:center;">
-          <p style="font-family:'Cormorant Garamond',serif; font-size:80px; color:rgba(201,162,75,0.2); line-height:1; font-style:italic;">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</p>
-          <p style="font-family:'Noto Serif JP',serif; font-size:14px; color:rgba(255,255,255,0.5); letter-spacing:0.1em;">{{ biz.title }}</p>
-        </div>
-      </div>
-      <div>
-        <span class="corp-kicker">{{ forloop.index | prepend: '0' | slice: -2, 2 }} — {{ biz.category | upcase }}</span>
-        <h2 class="corp-h2" style="margin-bottom:16px;">{{ biz.title }}</h2>
-        <div class="corp-divider"></div>
-        <p class="corp-lead" style="margin-top:24px;">{{ biz.description }}</p>
-        <div style="margin-top:40px;">
-          {% if biz.status == 'coming_soon' %}
-            <span class="corp-btn corp-btn--outline" style="opacity:0.5; cursor:not-allowed; color:var(--corp-sub); border-color:var(--corp-line);">準備中</span>
-          {% elsif biz.external %}
-            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
-          {% else %}
-            <a href="{{ biz.url | relative_url }}" class="corp-btn corp-btn--gold">{{ biz.cta }}</a>
-          {% endif %}
-          <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--outline" style="margin-left:12px; color:var(--corp-text); border-color:var(--corp-line);">相談する</a>
-        </div>
-      </div>
-      {% endunless %}
-
+  <!-- Opportunity Loop bar -->
+  <div class="biz-loop-bar corp-reveal" style="--d:0.3s">
+    <div class="biz-loop-node">
+      <span class="biz-loop-node__label">発信</span>
+      <span class="biz-loop-node__name">ORATIO</span>
+    </div>
+    <span class="biz-loop-arrow">→</span>
+    <div class="biz-loop-node">
+      <span class="biz-loop-node__label">実装</span>
+      <span class="biz-loop-node__name">PRAXIS</span>
+    </div>
+    <span class="biz-loop-arrow">→</span>
+    <div class="biz-loop-node">
+      <span class="biz-loop-node__label">育成</span>
+      <span class="biz-loop-node__name">ACADEMIA</span>
+    </div>
+    <span class="biz-loop-arrow">→</span>
+    <div class="biz-loop-node">
+      <span class="biz-loop-node__label">発信</span>
+      <span class="biz-loop-node__name">ORATIO</span>
     </div>
   </div>
-  {% endfor %}
-
 </section>
 
-<!-- CTA -->
-<div class="corp-cta-block">
-  <h2 class="corp-cta-block__heading">どの事業でもまずは<br>ご相談ください。</h2>
-  <p class="corp-cta-block__sub">
-    用件に応じた専用フォームで、スムーズにご対応します。
-  </p>
-  <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--gold">お問い合わせへ</a>
+<!-- 3 Featured Businesses -->
+<div class="biz-featured-grid">
+
+  <!-- PRAXIS -->
+  <div class="biz-featured-card corp-reveal" style="--accent:#2F7D4B; --d:0s">
+    <div class="biz-featured-card__num">Front Business 01</div>
+    <div class="biz-featured-card__brand">PRAXIS</div>
+    <div class="biz-featured-card__subtitle">AI・DXコンサルティング</div>
+    <p class="biz-featured-card__desc">
+      中小企業のデジタル変革を伴走支援。AI活用・業務自動化・Web制作・補助金活用まで、実装フェーズまでを一気通貫でサポートします。
+    </p>
+    <div class="biz-featured-card__loop">
+      <strong>Opportunity Loop での役割：</strong><br>
+      ORATIOで信頼を得た企業へAI・DXを実装し、成果事例をORATIOへフィードバック。
+    </div>
+    <a href="{{ '/business/praxis/' | relative_url }}" class="corp-btn corp-btn--gold" style="background:#2F7D4B; align-self:flex-start;">詳しく見る</a>
+  </div>
+
+  <!-- ACADEMIA -->
+  <div class="biz-featured-card corp-reveal" style="--accent:#C75A1A; --d:0.1s">
+    <div class="biz-featured-card__num">Front Business 02</div>
+    <div class="biz-featured-card__brand">ACADEMIA</div>
+    <div class="biz-featured-card__subtitle">学生機会創出・日本学生アンバサダー協会</div>
+    <p class="biz-featured-card__desc">
+      不登校・Z世代・地方学生に「選択肢」を届ける。企業スポンサーと学生をつなぎ、キャリア形成から採用まで支援します。
+    </p>
+    <div class="biz-featured-card__loop">
+      <strong>Opportunity Loop での役割：</strong><br>
+      PRASISクライアントの採用課題を解決。学生の実績がORATIOのコンテンツになる。
+    </div>
+    <a href="{{ '/business/academia/' | relative_url }}" class="corp-btn corp-btn--gold" style="background:#C75A1A; align-self:flex-start;">詳しく見る</a>
+  </div>
+
+  <!-- ORATIO -->
+  <div class="biz-featured-card corp-reveal" style="--accent:#C9A24B; --d:0.2s">
+    <div class="biz-featured-card__num">Front Business 03</div>
+    <div class="biz-featured-card__brand">ORATIO</div>
+    <div class="biz-featured-card__subtitle">代表発信・タレント・メディア</div>
+    <p class="biz-featured-card__desc">
+      「不登校×AI×起業」という唯一の文脈から、次世代リーダーシップを発信。登壇・取材・YouTube・SNSを通じて信頼資本を循環させます。
+    </p>
+    <div class="biz-featured-card__loop">
+      <strong>Opportunity Loop での役割：</strong><br>
+      代表の発信が全事業のトップオブファネルになり、問い合わせを各事業へ振り分ける。
+    </div>
+    <a href="{{ '/business/oratio/' | relative_url }}" class="corp-btn corp-btn--gold" style="align-self:flex-start;">詳しく見る</a>
+  </div>
+
 </div>
+
+<!-- Background Businesses -->
+<section class="biz-bg-section">
+  <div class="corp-container--narrow">
+    <span class="corp-kicker corp-reveal">Background Ventures</span>
+    <h2 class="corp-h2 corp-reveal" style="margin-bottom:16px; --d:0.1s">バックグラウンド事業</h2>
+    <div class="corp-divider corp-reveal" style="--d:0.15s"></div>
+    <p class="corp-lead corp-reveal" style="color:var(--corp-sub); margin:24px 0 0; --d:0.2s">
+      3事業の基盤を支える、専門特化型の事業群です。<br>
+      表に出ることは少ないですが、グループの競合優位を形成します。
+    </p>
+  </div>
+
+  <div class="corp-container">
+    <div class="biz-bg-grid">
+      <div class="biz-bg-card corp-reveal" style="--d:0.1s">
+        <div class="biz-bg-card__brand">ATELIER</div>
+        <div class="biz-bg-card__title">オーダースーツ事業</div>
+        <p class="biz-bg-card__desc">創業の原点。完全受注生産のビジネスウェアブランド。</p>
+      </div>
+      <div class="biz-bg-card corp-reveal" style="--d:0.15s">
+        <div class="biz-bg-card__brand">CODEX</div>
+        <div class="biz-bg-card__title">Web・コンテンツ制作</div>
+        <p class="biz-bg-card__desc">コーポレートサイト・LP・SEOコンテンツの企画制作。</p>
+      </div>
+      <div class="biz-bg-card corp-reveal" style="--d:0.2s">
+        <div class="biz-bg-card__brand">VANGUARD</div>
+        <div class="biz-bg-card__title">販売促進・営業代行</div>
+        <p class="biz-bg-card__desc">BtoB新規開拓・代理店網構築・インサイドセールス。</p>
+      </div>
+      <div class="biz-bg-card corp-reveal" style="--d:0.25s">
+        <div class="biz-bg-card__brand">CHRONICLE</div>
+        <div class="biz-bg-card__title">メディア運営代行</div>
+        <p class="biz-bg-card__desc">オウンドメディア・SNS運用・YouTubeチャンネル代行。</p>
+      </div>
+      <div class="biz-bg-card corp-reveal" style="--d:0.3s">
+        <div class="biz-bg-card__brand">LUMEN</div>
+        <div class="biz-bg-card__title">レーザー製品</div>
+        <p class="biz-bg-card__desc">業務用レーザー機器の輸入販売・サポート。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="corp-section corp-section--white" style="padding:80px 24px;">
+  <div class="corp-container corp-text-center">
+    <span class="corp-kicker corp-reveal">Contact</span>
+    <h3 class="corp-h3 corp-reveal" style="margin-bottom:16px; --d:0.1s">どの事業への相談も、まずここから。</h3>
+    <p class="corp-lead corp-reveal" style="color:var(--corp-sub); max-width:480px; margin:0 auto 40px; --d:0.15s">
+      フォームでご用件をお選びいただくと、担当者へ直接つながります。
+    </p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;" class="corp-reveal" style="--d:0.2s">
+      <a href="{{ '/contact/?type=praxis' | relative_url }}" class="corp-btn corp-btn--gold">AI・DX無料相談（PRAXIS）</a>
+      <a href="{{ '/contact/?type=academia' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">アンバサダー参加（ACADEMIA）</a>
+      <a href="{{ '/contact/?type=oratio' | relative_url }}" class="corp-btn corp-btn--outline" style="color:var(--corp-text); border-color:var(--corp-line);">取材・登壇依頼（ORATIO）</a>
+    </div>
+  </div>
+</section>

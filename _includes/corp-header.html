@@ -1,27 +1,33 @@
 <header class="corp-header" id="corp-header">
   <div class="corp-header__inner">
-    <!-- Logo -->
-    <a href="{{ '/' | relative_url }}" class="corp-header__logo">
+    <!-- ロゴ -->
+    <a href="{{ '/group/' | absolute_url }}" class="corp-header__logo">
       <picture>
         <source srcset="{{ '/images/rogo.new_transpalent-Photoroom.webp' | relative_url }}" type="image/webp">
-        <img src="{{ '/images/rogo.new_transpalent-Photoroom.png' | relative_url }}" alt="Regalis Japan Group Logo">
+        <img src="{{ '/images/rogo.new_transpalent-Photoroom.png' | relative_url }}" alt="Regalis Japan Group ロゴ">
       </picture>
-      <span class="corp-header__logo-label">Corporate</span>
+      <span class="corp-header__logo-label">グループ</span>
     </a>
 
-    <!-- Desktop Nav -->
-    <nav aria-label="Corporate Navigation">
+    <!-- PC ナビゲーション -->
+    <nav aria-label="メインナビゲーション">
       <ul class="corp-nav">
-        <li><a href="{{ '/#business' | relative_url }}">Business</a></li>
-        <li><a href="{{ '/about/company.html' | relative_url }}">About</a></li>
-        <li><a href="{{ '/about/members.html' | relative_url }}">Members</a></li>
-        <li><a href="{{ '/about/philosophy.html' | relative_url }}">Philosophy</a></li>
-        <li><a href="https://regalis-order-suits.com/" class="corp-header__back">← Brand Site</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}" class="corp-nav__cta">Contact</a></li>
+        <li><a href="{{ '/about/ceo.html' | relative_url }}">代表について</a></li>
+        <li class="corp-nav__has-drop">
+          <a href="{{ '/business/' | relative_url }}">3つの事業</a>
+          <ul class="corp-nav__drop">
+            <li><a href="{{ '/business/praxis/' | relative_url }}"><span class="drop-brand">PRAXIS</span> AI・DXコンサル</a></li>
+            <li><a href="{{ '/business/academia/' | relative_url }}"><span class="drop-brand">ACADEMIA</span> 学生機会創出</a></li>
+            <li><a href="{{ '/business/oratio/' | relative_url }}"><span class="drop-brand">ORATIO</span> 代表発信・タレント</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ '/about/company.html' | relative_url }}">会社概要</a></li>
+        <li><a href="https://regalis-order-suits.com/" class="corp-header__back" target="_blank" rel="noopener">スーツブランド ↗</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" class="corp-nav__cta">無料相談</a></li>
       </ul>
     </nav>
 
-    <!-- Hamburger (mobile) -->
+    <!-- ハンバーガー（モバイル） -->
     <button class="corp-hamburger" id="corp-hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="corp-mobile-nav">
       <span></span>
       <span></span>
@@ -30,15 +36,19 @@
   </div>
 </header>
 
-<!-- Mobile Nav Overlay -->
+<!-- モバイルナビ -->
 <nav id="corp-mobile-nav" class="corp-mobile-nav" aria-label="モバイルナビゲーション">
-  <a href="{{ '/' | relative_url }}">Top</a>
-  <a href="{{ '/#business' | relative_url }}">Business</a>
-  <a href="{{ '/about/company.html' | relative_url }}">About</a>
-  <a href="{{ '/about/members.html' | relative_url }}">Members</a>
-  <a href="{{ '/about/philosophy.html' | relative_url }}">Philosophy</a>
-  <a href="{{ '/contact/' | relative_url }}">Contact</a>
-  <a href="https://regalis-order-suits.com/" style="font-size:14px; opacity:0.5;">← Brand Site</a>
+  <a href="{{ '/' | relative_url }}">ホーム</a>
+  <a href="{{ '/about/ceo.html' | relative_url }}">代表について</a>
+  <div class="corp-mobile-nav__group">
+    <span class="corp-mobile-nav__label">3つの事業</span>
+    <a href="{{ '/business/praxis/' | relative_url }}">AI・DXコンサル（PRAXIS）</a>
+    <a href="{{ '/business/academia/' | relative_url }}">学生機会創出（ACADEMIA）</a>
+    <a href="{{ '/business/oratio/' | relative_url }}">代表発信・タレント（ORATIO）</a>
+  </div>
+  <a href="{{ '/about/company.html' | relative_url }}">会社概要</a>
+  <a href="{{ '/contact/' | relative_url }}">無料相談</a>
+  <a href="https://regalis-order-suits.com/" style="font-size:13px; opacity:0.5;" target="_blank" rel="noopener">スーツブランドへ ↗</a>
 </nav>
 
 <script>
@@ -59,13 +69,8 @@
       document.body.style.overflow = '';
     });
   });
-  // Scroll detection
   window.addEventListener('scroll', function(){
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+    header.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
 })();
 </script>
