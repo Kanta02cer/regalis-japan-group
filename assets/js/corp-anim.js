@@ -19,7 +19,7 @@
           var el = entry.target;
           var delay = el.dataset.delay || 0;
           setTimeout(function () {
-            el.classList.add('is-visible');
+            el.classList.add('revealed');
           }, parseInt(delay, 10));
           io.unobserve(el);
         }

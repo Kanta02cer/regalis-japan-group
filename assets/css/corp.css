@@ -53,6 +53,16 @@
   --ff-sans:      'Noto Sans JP', 'Inter', sans-serif;
   --ff-mono:      'JetBrains Mono', 'Fira Code', monospace;
 
+  /* ── Legacy aliases (v1 → v2 compat) ─────────────────────── */
+  --corp-gold:       var(--gold);
+  --corp-deep-gold:  var(--gold-deep);
+  --corp-text:       var(--tx-dark);
+  --corp-sub:        var(--tx-dark-sub);
+  --corp-line:       var(--line-light);
+  --corp-ivory:      var(--ivory);
+  --corp-abyss:      var(--abyss);
+  --corp-surface:    var(--surface);
+
   /* Motion */
   --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
@@ -1507,4 +1517,40 @@ details[open] summary span:last-child { transform: rotate(45deg); }
 details summary span:last-child {
   display: inline-block;
   transition: transform var(--dur-fast);
+}
+
+/* ── Section entrance (corp-anim.js: in-view) ───────────────────── */
+.corp-section {
+  opacity: 0.999; /* baseline — prevent flash; actual reveal via .reveal children */
+}
+
+/* Active nav link */
+.corp-nav a.is-active,
+.corp-mobile-nav a.is-active {
+  color: var(--gold);
+}
+
+/* ── Responsive: Mobile hero layout ────────────────────────────── */
+@media (max-width: 768px) {
+  .corp-hero__content {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  .hero-cta {
+    flex-direction: column;
+  }
+  .hero-cta .corp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .corp-business-grid {
+    grid-template-columns: 1fr;
+  }
+  .corp-member-grid {
+    grid-template-columns: 1fr;
+  }
+  .corp-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
