@@ -1,0 +1,103 @@
+- id: order-suits
+  title: オーダースーツ事業
+  title_en: Order Suits
+  tagline: 「素材は、言葉よりも雄弁にその人の在り方を語る。」
+  description: 京都の職人技と東京のモダン美学を融合したオーダースーツブランド「Regalis」。四ツ谷麹町を拠点に、AI採寸技術と伝統的職人芸を組み合わせた次世代型オーダースーツを提供します。
+  icon: suit
+  color: "#C9A24B"
+  url: /
+  external: true
+  cta: ブランドサイトへ
+  status: active
+  category: lifestyle
+
+- id: dx-consulting
+  title: AI・DXコンサルティング
+  title_en: AI & DX Consulting
+  tagline: 「現場から変える、デジタル経営への最短経路。」
+  description: 中小企業のAI導入・業務DXを支援するコンサルティングサービス。机上論ではなく、実装まで伴走する現場主義のDX支援で、補助金活用から運用定着まで一気通貫でサポートします。
+  icon: chip
+  color: "#2F7D4B"
+  url: /group/business/dx-consulting/
+  external: false
+  cta: 詳細を見る
+  status: active
+  category: consulting
+
+- id: web-development
+  title: Webサイト開発
+  title_en: Web Development
+  tagline: 「成果にコミットする、制作と運用の一貫支援。」
+  description: コーポレートサイト・LPからECサイトまで、戦略設計から制作・SEO・解析まで一貫して対応。自社サイトの運用実績そのものが生きた事例です。
+  icon: code
+  color: "#1D6FA0"
+  url: /group/business/web-development/
+  external: false
+  cta: 詳細を見る
+  status: active
+  category: digital
+
+- id: sales-promotion
+  title: 販売促進・営業代行
+  title_en: Sales Promotion
+  tagline: 「販路を拓く、成果報酬型の営業パートナー。」
+  description: メーカーや新商品の販路拡大を成果報酬型で支援。商材カテゴリに応じたチャネル設計・営業代行・代理店開拓を展開します。
+  icon: chart
+  color: "#8A3FB5"
+  url: /group/business/sales-promotion/
+  external: false
+  cta: 詳細を見る
+  status: active
+  category: sales
+
+- id: media-operation
+  title: メディア運営代行
+  title_en: Media Operation
+  tagline: 「資産になるコンテンツで、検索とAIに選ばれ続ける。」
+  description: SEO戦略・ジャーナル運営・SNS運用を統合的に支援。AIO（AI検索最適化）時代に対応したコンテンツ資産の構築をサポートします。
+  icon: media
+  color: "#C9A24B"
+  url: /group/business/media-operation/
+  external: false
+  cta: 詳細を見る
+  status: active
+  category: digital
+
+- id: student-ambassador
+  title: 日本学生アンバサダー協会
+  title_en: Japan Student Ambassador Association
+  tagline: 「次世代の居場所と出番を、全国に届ける。」
+  description: 不登校・進路に悩む学生に活動の場と全国のネットワークを提供するアンバサダー制度。次の時代を担う若者たちが自己表現と社会接続を実現できる場を創ります。
+  icon: students
+  color: "#C75A1A"
+  url: /group/business/student-ambassador/
+  external: false
+  cta: 詳細を見る
+  status: active
+  category: social
+
+- id: talent
+  title: 代表タレント活動
+  title_en: CEO Talent
+  tagline: 「経営者の言葉が、ブランドの最前線になる。」
+  description: 代表・井上幹太の登壇・メディア出演・取材対応。起業家・デザイン思考・多角経営をテーマとした講演・インタビュー・コラム執筆を受け付けます。
+  icon: mic
+  color: "#B83227"
+  url: /group/business/talent/
+  external: false
+  cta: 出演・取材依頼
+  status: active
+  category: pr
+
+- id: laser-products
+  title: レーザー製品
+  title_en: Laser Products
+  tagline: 「精密技術を、医療・美容・産業の現場へ。」
+  description: 医療・美容・工業向けレーザー機器の販売・導入支援。型番・仕様・サポート体制まで丁寧に対応します。
+  icon: laser
+  color: "#555555"
+  url: /group/business/laser-products/
+  external: false
+  cta: 製品情報を見る
+  status: coming_soon
+  category: product

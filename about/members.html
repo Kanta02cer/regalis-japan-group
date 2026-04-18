@@ -1,0 +1,89 @@
+---
+layout: corp
+title: "役員・メンバー"
+meta_title: "役員・メンバー | Regalis Japan Group株式会社"
+description: "Regalis Japan Group株式会社の役員・メンバー紹介。代表取締役 井上幹太・取締役 三島大毅・堀内文翔のプロフィールと担当事業。"
+---
+
+<!-- Breadcrumb -->
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>役員・メンバー</span>
+</nav>
+
+<!-- Page Hero -->
+<div class="corp-page-hero">
+  <div class="corp-page-hero__inner">
+    <p class="corp-page-hero__title-en">Leadership</p>
+    <h1 class="corp-page-hero__title">役員・メンバー</h1>
+    <p class="corp-page-hero__desc">
+      Regalis Japan Groupを動かす、創業メンバーのご紹介。
+    </p>
+  </div>
+</div>
+
+<!-- Members -->
+<section class="corp-section corp-section--white">
+  <div class="corp-container">
+    <span class="corp-kicker">Founders & Directors</span>
+    <h2 class="corp-h2" style="margin-bottom:64px;">役員</h2>
+
+    {% for member in site.data.members %}
+    <div style="display:grid; grid-template-columns:240px 1fr; gap:64px; align-items:start; margin-bottom:80px; padding-bottom:80px; border-bottom:1px solid var(--corp-line);">
+      <div style="text-align:center;">
+        {% if member.photo != "" %}
+        <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" style="width:180px; height:180px; object-fit:cover; border-radius:50%; border:2px solid rgba(201,162,75,0.3); margin:0 auto 20px; display:block;">
+        {% else %}
+        <div class="corp-member-card__photo-placeholder" style="width:180px; height:180px; font-size:40px; margin:0 auto 20px;">{{ member.name | slice: 0, 1 }}</div>
+        {% endif %}
+        <div class="corp-member-card__role">{{ member.role }}</div>
+        <div class="corp-member-card__name" style="font-size:22px;">{{ member.name }}</div>
+        <div class="corp-member-card__name-en">{{ member.name_en }}</div>
+
+        {% if member.sns %}
+        <div style="display:flex; gap:12px; justify-content:center; margin-top:16px;">
+          {% if member.sns.x %}
+          <a href="{{ member.sns.x }}" target="_blank" rel="noopener noreferrer" style="font-size:12px; color:var(--corp-sub); text-decoration:none;">X</a>
+          {% endif %}
+          {% if member.sns.instagram %}
+          <a href="{{ member.sns.instagram }}" target="_blank" rel="noopener noreferrer" style="font-size:12px; color:var(--corp-sub); text-decoration:none;">Instagram</a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+
+      <div>
+        <h3 class="corp-h3" style="margin-bottom:20px;">{{ member.role }} — {{ member.name }}</h3>
+        <div class="corp-divider"></div>
+        <p style="font-size:15px; color:var(--corp-sub); line-height:2; margin-top:24px; white-space:pre-line;">{{ member.bio }}</p>
+
+        <!-- 担当事業タグ -->
+        <div style="margin-top:32px;">
+          <p style="font-size:11px; letter-spacing:0.2em; color:var(--corp-gold); text-transform:uppercase; margin-bottom:12px;">Responsible Business Areas</p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            {% for biz_id in member.businesses %}
+              {% assign biz = site.data.businesses | where: "id", biz_id | first %}
+              {% if biz %}
+              <span style="font-size:12px; padding:4px 12px; background:var(--corp-ivory); border:1px solid var(--corp-line); color:var(--corp-sub); border-radius:2px;">{{ biz.title }}</span>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+<!-- Join Us -->
+<div class="corp-cta-block">
+  <span class="corp-kicker">Career</span>
+  <h2 class="corp-cta-block__heading">共に創るメンバーを<br>募集しています。</h2>
+  <p class="corp-cta-block__sub">
+    多角経営の現場で、事業横断的に成長したい方を歓迎します。<br>
+    まずはカジュアル面談からどうぞ。
+  </p>
+  <a href="{{ '/contact/?type=career' | relative_url }}" class="corp-btn corp-btn--gold">採用・面談のお問い合わせ</a>
+</div>

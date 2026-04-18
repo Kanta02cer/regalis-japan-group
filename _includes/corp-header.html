@@ -1,0 +1,71 @@
+<header class="corp-header" id="corp-header">
+  <div class="corp-header__inner">
+    <!-- Logo -->
+    <a href="{{ '/' | relative_url }}" class="corp-header__logo">
+      <picture>
+        <source srcset="{{ '/images/rogo.new_transpalent-Photoroom.webp' | relative_url }}" type="image/webp">
+        <img src="{{ '/images/rogo.new_transpalent-Photoroom.png' | relative_url }}" alt="Regalis Japan Group Logo">
+      </picture>
+      <span class="corp-header__logo-label">Corporate</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav aria-label="Corporate Navigation">
+      <ul class="corp-nav">
+        <li><a href="{{ '/#business' | relative_url }}">Business</a></li>
+        <li><a href="{{ '/about/company.html' | relative_url }}">About</a></li>
+        <li><a href="{{ '/about/members.html' | relative_url }}">Members</a></li>
+        <li><a href="{{ '/about/philosophy.html' | relative_url }}">Philosophy</a></li>
+        <li><a href="https://regalis-order-suits.com/" class="corp-header__back">← Brand Site</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" class="corp-nav__cta">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button class="corp-hamburger" id="corp-hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="corp-mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<nav id="corp-mobile-nav" class="corp-mobile-nav" aria-label="モバイルナビゲーション">
+  <a href="{{ '/' | relative_url }}">Top</a>
+  <a href="{{ '/#business' | relative_url }}">Business</a>
+  <a href="{{ '/about/company.html' | relative_url }}">About</a>
+  <a href="{{ '/about/members.html' | relative_url }}">Members</a>
+  <a href="{{ '/about/philosophy.html' | relative_url }}">Philosophy</a>
+  <a href="{{ '/contact/' | relative_url }}">Contact</a>
+  <a href="https://regalis-order-suits.com/" style="font-size:14px; opacity:0.5;">← Brand Site</a>
+</nav>
+
+<script>
+(function(){
+  var btn = document.getElementById('corp-hamburger');
+  var nav = document.getElementById('corp-mobile-nav');
+  var header = document.getElementById('corp-header');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+  // Scroll detection
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+})();
+</script>

@@ -1,0 +1,606 @@
+---
+layout: corp
+title: "Regalis Japan Group — Corporate"
+meta_title: "Regalis Japan Group株式会社 | 人知と品格で、産業を横断する。"
+description: "Regalis Japan Group株式会社の公式コーポレートサイト。AI/DXコンサル・Web制作・オーダースーツ・学生支援など8事業を展開するグループ企業。東京・千代田区麹町。"
+---
+
+<!-- ===============================================================
+  HERO — "JINZAI / 人知"
+  The AI entity traverses Japan's industry domains
+  ================================================================ -->
+<section class="corp-hero" id="hero">
+
+  <!-- Background texture -->
+  <div class="corp-hero__grid"></div>
+
+  <!-- 3D Gyroscope (AI Entity visual) -->
+  <div class="geo-sphere-wrap" aria-hidden="true">
+    <div class="geo-sphere">
+      <div class="geo-ring"></div>
+      <div class="geo-ring"></div>
+      <div class="geo-ring"></div>
+      <div class="geo-core"></div>
+      <div class="geo-dot"></div>
+      <div class="geo-dot"></div>
+      <div class="geo-dot"></div>
+      <div class="geo-tri"></div>
+      <div class="geo-tri"></div>
+      <div class="geo-tri"></div>
+    </div>
+
+    <!-- Industry orbit labels (float around sphere) -->
+    <div class="geo-orbit-labels" aria-hidden="true">
+      <span class="geo-ol geo-ol--1">DX</span>
+      <span class="geo-ol geo-ol--2">Web</span>
+      <span class="geo-ol geo-ol--3">Suits</span>
+      <span class="geo-ol geo-ol--4">Media</span>
+      <span class="geo-ol geo-ol--5">Students</span>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="corp-hero__content">
+    <div class="hero-badge reveal">
+      <span class="hero-badge__dot"></span>
+      <span class="hero-badge__text">Regalis Japan Group / Corporate Site</span>
+    </div>
+
+    <h1 class="hero-heading reveal reveal--delay-1">
+      <span class="hero-heading__en">Intelligence<br>that <em>moves</em></span>
+      <span class="hero-heading__jp">産業を横断する、知性と品格。</span>
+    </h1>
+
+    <p class="hero-lead reveal reveal--delay-2">
+      経営と現場と次世代を、<br>
+      テクノロジーと品格でつなぐ。
+    </p>
+
+    <div class="hero-cta reveal reveal--delay-3">
+      <a href="#business" class="corp-btn corp-btn--gold">8つの事業を見る</a>
+      <a href="{{ '/about/message.html' | relative_url }}" class="corp-btn corp-btn--outline">代表メッセージ</a>
+    </div>
+
+    <!-- Vertical side decoration -->
+    <div class="hero-vertical-text" aria-hidden="true">
+      <span>Regalis Japan Group</span>
+      <span class="hero-vertical-text__line"></span>
+      <span>2025 — ∞</span>
+    </div>
+  </div>
+
+  <div class="corp-hero__scroll">Scroll</div>
+</section>
+
+<!-- ================================================================
+  TICKER STRIP
+  ================================================================ -->
+<div class="corp-ticker" aria-hidden="true">
+  <div class="corp-ticker__track">
+    {% assign ticker_items = "AI & DX Consulting|Web Development|Order Suits|Sales Promotion|Media Operation|Student Ambassador|CEO Talent|Laser Products|AI & DX Consulting|Web Development|Order Suits|Sales Promotion|Media Operation|Student Ambassador|CEO Talent|Laser Products" | split: "|" %}
+    {% for item in ticker_items %}
+    <div class="corp-ticker__item">{{ item }}</div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ================================================================
+  STAT ROW
+  ================================================================ -->
+<div class="corp-stat-row">
+  <div class="corp-stat reveal">
+    <div class="corp-stat__num">8</div>
+    <div class="corp-stat__label">Business Domains</div>
+  </div>
+  <div class="corp-stat reveal reveal--delay-1">
+    <div class="corp-stat__num">3</div>
+    <div class="corp-stat__label">Founders</div>
+  </div>
+  <div class="corp-stat reveal reveal--delay-2">
+    <div class="corp-stat__num">2025</div>
+    <div class="corp-stat__label">Founded</div>
+  </div>
+  <div class="corp-stat reveal reveal--delay-3">
+    <div class="corp-stat__num">麹町</div>
+    <div class="corp-stat__label">Chiyoda, Tokyo</div>
+  </div>
+</div>
+
+<!-- ================================================================
+  BUSINESS SECTION
+  ================================================================ -->
+<section class="corp-section corp-section--dark" id="business" style="padding-inline:0; padding-block-start:var(--section-py);">
+  <div class="corp-container" style="padding-bottom:48px;">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom:48px;">
+      <div class="reveal">
+        <span class="corp-kicker">Our Business</span>
+        <h2 class="corp-h2 corp-h2--light">8つの産業領域に、<br>一つの知性が流れる。</h2>
+      </div>
+      <a href="{{ '/business/' | relative_url }}" class="corp-btn corp-btn--outline reveal">全事業を見る →</a>
+    </div>
+  </div>
+
+  <!-- Business grid — full bleed -->
+  <div class="corp-business-grid" style="margin:0;">
+
+    <a href="{{ '/' | relative_url }}" class="corp-biz-card reveal" data-industry="suits">
+      <div class="corp-biz-card__num">01 — Lifestyle</div>
+      <div class="corp-biz-card__title">オーダースーツ事業</div>
+      <p class="corp-biz-card__desc">京都の職人技 × 東京のモダン美学。AI採寸と伝統職人が共鳴するブランド「Regalis」。</p>
+      <span class="corp-biz-card__link">Brand Site</span>
+    </a>
+
+    <a href="{{ '/business/dx-consulting/' | relative_url }}" class="corp-biz-card reveal reveal--delay-1" data-industry="dx">
+      <div class="corp-biz-card__num">02 — Consulting</div>
+      <div class="corp-biz-card__title">AI・DXコンサルティング</div>
+      <p class="corp-biz-card__desc">現場から変える、デジタル経営への最短経路。補助金活用から実装定着まで伴走。</p>
+      <span class="corp-biz-card__link">詳細を見る</span>
+    </a>
+
+    <a href="{{ '/business/web-development/' | relative_url }}" class="corp-biz-card reveal reveal--delay-2" data-industry="web">
+      <div class="corp-biz-card__num">03 — Digital</div>
+      <div class="corp-biz-card__title">Webサイト開発</div>
+      <p class="corp-biz-card__desc">成果にコミットする制作と運用。自社サイト運用実績そのものが生きた証明。</p>
+      <span class="corp-biz-card__link">詳細を見る</span>
+    </a>
+
+    <a href="{{ '/business/sales-promotion/' | relative_url }}" class="corp-biz-card reveal reveal--delay-3" data-industry="sales">
+      <div class="corp-biz-card__num">04 — Sales</div>
+      <div class="corp-biz-card__title">販売促進・営業代行</div>
+      <p class="corp-biz-card__desc">成果報酬型で販路を拓く。チャネル設計から代理店開拓まで一貫対応。</p>
+      <span class="corp-biz-card__link">詳細を見る</span>
+    </a>
+
+    <a href="{{ '/business/media-operation/' | relative_url }}" class="corp-biz-card reveal" data-industry="media">
+      <div class="corp-biz-card__num">05 — Digital</div>
+      <div class="corp-biz-card__title">メディア運営代行</div>
+      <p class="corp-biz-card__desc">資産になるコンテンツで、Google検索とAIの両方に選ばれ続ける設計。</p>
+      <span class="corp-biz-card__link">詳細を見る</span>
+    </a>
+
+    <a href="{{ '/business/student-ambassador/' | relative_url }}" class="corp-biz-card reveal reveal--delay-1" data-industry="student">
+      <div class="corp-biz-card__num">06 — Social</div>
+      <div class="corp-biz-card__title">日本学生アンバサダー協会</div>
+      <p class="corp-biz-card__desc">次世代の居場所と出番を全国に。不登校・進路に悩む学生の「活躍の場」を創る。</p>
+      <span class="corp-biz-card__link">詳細を見る</span>
+    </a>
+
+    <a href="{{ '/business/talent/' | relative_url }}" class="corp-biz-card reveal reveal--delay-2" data-industry="talent">
+      <div class="corp-biz-card__num">07 — PR</div>
+      <div class="corp-biz-card__title">代表タレント活動</div>
+      <p class="corp-biz-card__desc">経営者の言葉がブランドの最前線になる。取材・講演・出演依頼受付中。</p>
+      <span class="corp-biz-card__link">出演・取材依頼</span>
+    </a>
+
+    <a href="{{ '/business/laser-products/' | relative_url }}" class="corp-biz-card corp-biz-card--coming reveal reveal--delay-3" data-industry="laser">
+      <div class="corp-biz-card__num">08 — Product</div>
+      <div class="corp-biz-card__title">レーザー製品<br><small style="font-size:10px;opacity:0.5;">Coming Soon</small></div>
+      <p class="corp-biz-card__desc">医療・美容・工業向けレーザー機器の販売・導入支援。</p>
+      <span class="corp-biz-card__link">準備中</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ================================================================
+  AI CONCEPT SECTION — The Personified Intelligence
+  ================================================================ -->
+<section class="corp-section corp-section--deeper ai-concept" style="position:relative; overflow:hidden;">
+
+  <!-- Large background Japanese character -->
+  <div class="ai-concept__kanji" aria-hidden="true">知</div>
+
+  <!-- Hexagonal grid overlay -->
+  <div class="ai-concept__hex-grid" aria-hidden="true"></div>
+
+  <div class="corp-container" style="position:relative; z-index:2;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+
+      <!-- Left: Mini gyroscope + concept -->
+      <div class="reveal-x">
+        <!-- Small inline geo shape -->
+        <div class="ai-concept__geo-mini" aria-hidden="true">
+          <div class="geo-ring" style="--size:120px; width:120px; height:120px; border-color:rgba(201,162,75,0.5);"></div>
+          <div class="geo-ring" style="border-color:rgba(10,191,203,0.35); animation-duration:28s; animation-direction:reverse;"></div>
+          <div class="geo-core"></div>
+        </div>
+
+        <span class="corp-kicker" style="margin-top:32px;">AI × 日本の美意識</span>
+        <h2 class="corp-h2 corp-h2--light" style="margin-bottom:24px;">
+          産業を横断する、<br>
+          擬人化された知性。
+        </h2>
+        <div class="corp-divider"></div>
+        <p style="font-size:15px; color:var(--tx-sub); line-height:2.1; margin-top:24px;">
+          私たちのAI活用は、ツールの導入ではなく
+          「知性の在り方」の設計です。<br>
+          職人がスーツの一着に哲学を宿すように、
+          AIも設計思想を持つ存在として事業に組み込まれます。
+        </p>
+        <p style="font-size:15px; color:var(--tx-sub); line-height:2.1; margin-top:16px;">
+          オーダースーツの採寸からDX戦略の立案まで——<br>
+          私たちの「人知（JINZAI）」は8つの産業領域を渡り歩き、
+          それぞれの現場で形を変えて働いています。
+        </p>
+        <div style="margin-top:40px;">
+          <a href="{{ '/about/philosophy.html' | relative_url }}" class="corp-btn corp-btn--outline">理念・ビジョンへ</a>
+        </div>
+      </div>
+
+      <!-- Right: AI principle pillars -->
+      <div class="reveal">
+        <div class="ai-pillars">
+          {% assign pillars = "構造化|AIは散漫なデータを、意味のある構造に変換する。組子の幾何学が空間に美を宿すように。|適応|現場ごとに形を変えながら、一貫した価値を届ける。変わるのは表現、変わらないのは誠実さ。|橋接|人と機械、伝統と革新、経営と現場——AIは対立ではなく橋となる。|持続|一時的な効率化ではなく、100年後にも誇れる仕事の仕組みを設計する。" | split: "|" %}
+          {% assign p_titles = "構造化|適応|橋接|持続" | split: "|" %}
+          {% assign p_bodies = "AIは散漫なデータを、意味のある構造に変換する。組子の幾何学が空間に美を宿すように。|現場ごとに形を変えながら、一貫した価値を届ける。変わるのは表現、変わらないのは誠実さ。|人と機械、伝統と革新、経営と現場——AIは対立ではなく橋となる。|一時的な効率化ではなく、100年後にも誇れる仕事の仕組みを設計する。" | split: "|" %}
+          {% assign p_en = "Structure|Adapt|Bridge|Sustain" | split: "|" %}
+          {% for t in p_titles %}
+          <div class="ai-pillar reveal reveal--delay-{{ forloop.index }}">
+            <div class="ai-pillar__num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+            <div class="ai-pillar__body">
+              <h3 class="ai-pillar__title">
+                {{ t }}
+                <span class="ai-pillar__en">{{ p_en[forloop.index0] }}</span>
+              </h3>
+              <p class="ai-pillar__desc">{{ p_bodies[forloop.index0] }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+  MEMBERS
+  ================================================================ -->
+<section class="corp-section corp-section--surface">
+  <div class="corp-container">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom:64px;">
+      <div class="reveal">
+        <span class="corp-kicker">Leadership</span>
+        <h2 class="corp-h2 corp-h2--light">知性の背後にいる、<br>人間たち。</h2>
+      </div>
+      <a href="{{ '/about/members.html' | relative_url }}" class="corp-btn corp-btn--outline reveal">全員を見る →</a>
+    </div>
+
+    <div class="corp-member-grid">
+      {% for member in site.data.members %}
+      <div class="corp-member-card corp-glass-card reveal reveal--delay-{{ forloop.index }}" style="background:rgba(255,255,255,0.03);">
+        {% if member.photo != "" %}
+        <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="corp-member-card__photo" style="width:140px; height:140px; margin:0 auto 20px;">
+        {% else %}
+        <div class="corp-member-card__photo-placeholder" style="width:140px; height:140px; margin:0 auto 20px;">{{ member.name | slice: 0, 1 }}</div>
+        {% endif %}
+        <div class="corp-member-card__role">{{ member.role }}</div>
+        <div class="corp-member-card__name">{{ member.name }}</div>
+        <div class="corp-member-card__name-en">{{ member.name_en }}</div>
+        <p class="corp-member-card__bio">{{ member.bio_short }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+  PHILOSOPHY STRIP
+  ================================================================ -->
+<section class="philosophy-strip">
+  <div class="philosophy-strip__inner">
+    <blockquote class="philosophy-quote reveal">
+      <p class="philosophy-quote__text">
+        「日本の美意識を、<br>現代の事業に翻訳する。」
+      </p>
+      <footer class="philosophy-quote__src">
+        Regalis Japan Group — Mission
+      </footer>
+    </blockquote>
+    <div class="philosophy-strip__actions reveal reveal--delay-2">
+      <a href="{{ '/about/philosophy.html' | relative_url }}" class="corp-btn corp-btn--outline">理念・ビジョンへ</a>
+      <a href="{{ '/about/company.html' | relative_url }}" class="corp-btn corp-btn--dark">会社概要</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+  CTA
+  ================================================================ -->
+<div class="corp-cta-block">
+  <p class="corp-kicker" style="justify-content:center;">Get in Touch</p>
+  <h2 class="corp-cta-block__heading reveal">まずは対話から、<br>始めましょう。</h2>
+  <p class="corp-cta-block__sub reveal reveal--delay-1">
+    事業のご相談・取材・採用など、目的に応じたフォームからお問い合わせいただけます。
+  </p>
+  <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--gold reveal reveal--delay-2" style="font-size:11px; padding:16px 48px;">お問い合わせへ</a>
+</div>
+
+<!-- ================================================================
+  PAGE-SPECIFIC STYLES
+  ================================================================ -->
+<style>
+/* ── Hero ── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px 6px 10px;
+  border: 1px solid rgba(201,162,75,0.25);
+  border-radius: 100px;
+  margin-bottom: 32px;
+}
+.hero-badge__dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px var(--gold);
+  animation: badgePulse 2.5s ease-in-out infinite;
+}
+.hero-badge__text {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: rgba(201,162,75,0.7);
+  text-transform: uppercase;
+}
+@keyframes badgePulse {
+  0%,100% { opacity:0.6; transform:scale(1); }
+  50%      { opacity:1;   transform:scale(1.3); }
+}
+
+.hero-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.hero-heading__en {
+  font-family: var(--ff-display);
+  font-size: clamp(52px, 8vw, 100px);
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.0;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+.hero-heading__en em {
+  font-style: italic;
+  color: var(--gold);
+  -webkit-text-stroke: 0px;
+}
+.hero-heading__jp {
+  font-family: var(--ff-serif);
+  font-size: clamp(12px, 1.8vw, 16px);
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+
+.hero-lead {
+  font-family: var(--ff-serif);
+  font-size: clamp(14px, 1.8vw, 18px);
+  color: rgba(255,255,255,0.55);
+  line-height: 2;
+  margin-bottom: 48px;
+  max-width: 480px;
+}
+
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* Vertical text (right side decoration) */
+.hero-vertical-text {
+  position: absolute;
+  right: var(--section-px);
+  bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--ff-mono);
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  color: rgba(255,255,255,0.18);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.hero-vertical-text__line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15), transparent);
+  flex-shrink: 0;
+}
+@media (max-width: 900px) { .hero-vertical-text { display: none; } }
+
+/* ── Orbit labels ── */
+.geo-orbit-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.geo-ol {
+  position: absolute;
+  font-family: var(--ff-mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(201,162,75,0.4);
+  white-space: nowrap;
+}
+.geo-ol--1 { top: -20px; left: 50%; transform: translateX(-50%); }
+.geo-ol--2 { top: 20%;  right: -36px; }
+.geo-ol--3 { bottom: -22px; left: 50%; transform: translateX(-50%); }
+.geo-ol--4 { top: 20%;  left: -36px; }
+.geo-ol--5 { bottom: 18%; right: -48px; }
+
+/* ── AI Concept Section ── */
+.ai-concept__kanji {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--ff-serif);
+  font-size: clamp(200px, 30vw, 440px);
+  color: rgba(255,255,255,0.018);
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+  font-weight: 900;
+  z-index: 0;
+  letter-spacing: -0.05em;
+}
+
+.ai-concept__hex-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(60deg,  rgba(10,191,203,0.04) 1px, transparent 1px),
+    linear-gradient(120deg, rgba(10,191,203,0.04) 1px, transparent 1px),
+    linear-gradient(0deg,   rgba(10,191,203,0.025) 1px, transparent 1px);
+  background-size: 56px 56px, 56px 56px, 112px 112px;
+  pointer-events: none;
+}
+
+/* Mini geo shape (left column) */
+.ai-concept__geo-mini {
+  --gs: 120px;
+  width: 120px; height: 120px;
+  position: relative;
+  transform-style: preserve-3d;
+  margin-bottom: 0;
+}
+.ai-concept__geo-mini .geo-ring { position: absolute; inset: 0; }
+.ai-concept__geo-mini .geo-core { position: absolute; inset: 22%; }
+
+/* AI Pillars */
+.ai-pillars { display: flex; flex-direction: column; gap: 0; }
+
+.ai-pillar {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line-dark);
+  transition: background var(--dur-mid);
+}
+
+.ai-pillar:last-child { border-bottom: none; }
+
+.ai-pillar__num {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  color: var(--gold);
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+  padding-top: 3px;
+  min-width: 24px;
+}
+
+.ai-pillar__title {
+  font-family: var(--ff-serif);
+  font-size: 16px;
+  color: var(--tx-bright);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.ai-pillar__en {
+  font-family: var(--ff-display);
+  font-size: 12px;
+  color: var(--gold);
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.ai-pillar__desc {
+  font-size: 12px;
+  color: var(--tx-sub);
+  line-height: 1.85;
+}
+
+/* ── Philosophy Strip ── */
+.philosophy-strip {
+  background: linear-gradient(135deg, var(--void) 0%, #0A0E18 50%, var(--void) 100%);
+  border-top: 1px solid var(--line-gold);
+  border-bottom: 1px solid var(--line-gold);
+  padding: var(--section-py) var(--section-px);
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 20% 50%, rgba(207,59,10,0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 80% 50%, rgba(201,162,75,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.philosophy-strip__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.philosophy-quote {
+  margin: 0;
+}
+
+.philosophy-quote__text {
+  font-family: var(--ff-serif);
+  font-size: clamp(20px, 3vw, 32px);
+  color: var(--tx-bright);
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.06em;
+}
+
+.philosophy-quote__text::before {
+  content: '"';
+  color: var(--gold);
+  font-family: var(--ff-display);
+  font-size: 2em;
+  line-height: 0;
+  vertical-align: -0.3em;
+  margin-right: 4px;
+  opacity: 0.5;
+}
+
+.philosophy-quote__src {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  color: rgba(201,162,75,0.5);
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.philosophy-strip__actions {
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* ── Responsive adjustments ── */
+@media (max-width: 768px) {
+  .ai-concept { }
+  .ai-concept > .corp-container > div {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .philosophy-strip__inner { flex-direction: column; }
+  .philosophy-strip__actions { flex-direction: column; }
+  .hero-heading__en { font-size: clamp(44px, 12vw, 80px); }
+}
+</style>

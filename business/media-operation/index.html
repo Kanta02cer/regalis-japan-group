@@ -1,0 +1,135 @@
+---
+layout: corp
+title: "メディア運営代行"
+meta_title: "メディア運営代行・SEO/AIO対応コンテンツ戦略 | Regalis Japan Group株式会社"
+description: "SEO・ジャーナル運営・SNS運用を統合支援。AIO（AI検索最適化）時代に対応したコンテンツ資産の構築。オウンドメディアの立ち上げから月次運用まで。"
+---
+
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <a href="{{ '/business/' | relative_url }}">事業紹介</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>メディア運営代行</span>
+</nav>
+
+<div class="corp-page-hero">
+  <div class="corp-page-hero__inner">
+    <p class="corp-page-hero__title-en">Media Operation</p>
+    <h1 class="corp-page-hero__title">メディア運営代行</h1>
+    <p class="corp-page-hero__desc">資産になるコンテンツで、検索とAIに選ばれ続ける。</p>
+    <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;">
+      <a href="{{ '/contact/?type=media' | relative_url }}" class="corp-btn corp-btn--gold">相談する</a>
+    </div>
+  </div>
+</div>
+
+<!-- Context: AIO -->
+<section class="corp-section corp-section--dark">
+  <div class="corp-container" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+    <div>
+      <span class="corp-kicker">2026年の検索環境</span>
+      <h2 class="corp-h2 corp-h2--light" style="margin-bottom:24px;">SEOだけでは<br>もう勝てない。</h2>
+      <div class="corp-divider"></div>
+      <p style="font-size:15px; color:rgba(255,255,255,0.7); line-height:2; margin-top:24px;">
+        ユーザーが情報を得る経路は根本から変わりました。
+        「Google検索→青いリンク」から「ChatGPTに聞く→答えが出る」へ。
+        この変化を無視したコンテンツ戦略は、短期は効いても中期で失速します。
+      </p>
+      <p style="font-size:15px; color:rgba(255,255,255,0.7); line-height:2; margin-top:16px;">
+        私たちはSEOとAIO（AI検索最適化）を統合した
+        「2026年型コンテンツ戦略」を提供します。
+      </p>
+    </div>
+    <div>
+      <table style="width:100%; border-collapse:collapse; font-size:13px;">
+        <thead>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.2);">
+            <th style="padding:12px 0; color:rgba(201,162,75,0.8); text-align:left; font-weight:400;">軸</th>
+            <th style="padding:12px 8px; color:rgba(201,162,75,0.8); font-weight:400;">従来SEO</th>
+            <th style="padding:12px 0; color:rgba(201,162,75,0.8); font-weight:400; text-align:right;">AIO</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% assign rows = "評価主体|検索アルゴリズム|LLMの文脈理解;勝利条件|検索結果上位表示|AIの回答に引用;評価対象|KW一致・被リンク|構造化された事実・独自見解;読み手|人間|LLM → 人間;勝ち筋|量的KW網羅|質的な一次情報・明確な立場" | split: ";" %}
+          {% for row in rows %}
+          {% assign cells = row | split: "|" %}
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:12px 0; color:rgba(255,255,255,0.5);">{{ cells[0] }}</td>
+            <td style="padding:12px 8px; color:rgba(255,255,255,0.75);">{{ cells[1] }}</td>
+            <td style="padding:12px 0; color:var(--corp-gold); text-align:right;">{{ cells[2] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="corp-section corp-section--white" id="menu">
+  <div class="corp-container">
+    <span class="corp-kicker">Service Menu</span>
+    <h2 class="corp-h2" style="margin-bottom:48px;">提供サービス・料金</h2>
+    <table class="corp-table" style="margin-bottom:16px;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--corp-text);">
+          <th style="width:30%; padding:16px 12px 16px 0;">サービス</th>
+          <th style="padding:16px 12px;">内容</th>
+          <th style="width:20%; padding:16px 0; text-align:right;">料金目安</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:'Noto Serif JP',serif; font-weight:500; padding:20px 12px 20px 0; color:var(--corp-text);">SEO/AIO戦略設計<br><small style="font-weight:400; color:var(--corp-sub);">スポット</small></td>
+          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">キーワード調査・ピラーコンテンツ設計・競合分析・llms.txt設計・構造化データ設計。戦略書として納品します。</td>
+          <td style="padding:20px 0; text-align:right; color:var(--corp-text); font-family:'Cormorant Garamond',serif; font-size:18px;">¥150,000〜</td>
+        </tr>
+        <tr>
+          <td style="font-family:'Noto Serif JP',serif; font-weight:500; padding:20px 12px 20px 0; color:var(--corp-text);">ジャーナル記事制作<br><small style="font-weight:400; color:var(--corp-sub);">月次</small></td>
+          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">月4〜8本の記事制作（2,000〜5,000字）。一次情報・立場のある主張・構造化記述でAIOに引用されやすい記事を制作。</td>
+          <td style="padding:20px 0; text-align:right; color:var(--corp-text); font-family:'Cormorant Garamond',serif; font-size:18px;">¥80,000〜/月</td>
+        </tr>
+        <tr>
+          <td style="font-family:'Noto Serif JP',serif; font-weight:500; padding:20px 12px 20px 0; color:var(--corp-text);">SNS運用代行<br><small style="font-weight:400; color:var(--corp-sub);">月次</small></td>
+          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">X（Twitter）・Instagram・LinkedIn の投稿企画〜制作〜投稿まで代行。ブランドトーンを維持した発信を継続します。</td>
+          <td style="padding:20px 0; text-align:right; color:var(--corp-text); font-family:'Cormorant Garamond',serif; font-size:18px;">¥50,000〜/月</td>
+        </tr>
+        <tr>
+          <td style="font-family:'Noto Serif JP',serif; font-weight:500; padding:20px 12px 20px 0; color:var(--corp-text);">メディア統合運営<br><small style="font-weight:400; color:var(--corp-sub);">フルパッケージ</small></td>
+          <td style="padding:20px 12px; color:var(--corp-sub); line-height:1.8;">SEO戦略・記事制作・SNS運用・月次解析レポートをパッケージで提供。オウンドメディアの立ち上げから成長まで一気通貫。</td>
+          <td style="padding:20px 0; text-align:right; color:var(--corp-text); font-family:'Cormorant Garamond',serif; font-size:18px;">¥150,000〜/月</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px; color:var(--corp-sub);">※料金はすべて税別・目安です。</p>
+  </div>
+</section>
+
+<!-- Strengths -->
+<section class="corp-section corp-section--ivory">
+  <div class="corp-container">
+    <span class="corp-kicker">Why Choose Us</span>
+    <h2 class="corp-h2" style="margin-bottom:48px;">選ばれる3つの理由</h2>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+      <div style="padding:40px 32px; background:white; border-top:3px solid var(--corp-gold);">
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:17px; color:var(--corp-text); margin-bottom:16px;">自社メディアで実証済みの手法</h3>
+        <p style="font-size:14px; color:var(--corp-sub); line-height:1.9;">このコーポレートサイト・オーダースーツブランドサイトで実践した手法をそのまま提供します。「試したことのない理論」は一切使いません。</p>
+      </div>
+      <div style="padding:40px 32px; background:white; border-top:3px solid var(--corp-gold);">
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:17px; color:var(--corp-text); margin-bottom:16px;">SEO×AIOの統合最適化</h3>
+        <p style="font-size:14px; color:var(--corp-sub); line-height:1.9;">Google検索と生成AI検索の両方で評価される、2026年型のコンテンツ戦略を提供します。llms.txtの実装・FAQPageの構造化データまで対応。</p>
+      </div>
+      <div style="padding:40px 32px; background:white; border-top:3px solid var(--corp-gold);">
+        <h3 style="font-family:'Noto Serif JP',serif; font-size:17px; color:var(--corp-text); margin-bottom:16px;">「立場のある記事」で資産を積む</h3>
+        <p style="font-size:14px; color:var(--corp-sub); line-height:1.9;">中立的な情報集約記事ではなく、クライアントの一次情報・現場経験に基づく「主張のある記事」を制作。薄いコンテンツの時代に差別化します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="corp-cta-block">
+  <h2 class="corp-cta-block__heading">まずは現状の<br>メディア状況をお聞かせください。</h2>
+  <p class="corp-cta-block__sub">現在のPV数・目標・課題感だけでご相談いただけます。</p>
+  <a href="{{ '/contact/?type=media' | relative_url }}" class="corp-btn corp-btn--gold">メディア運営の相談フォームへ</a>
+</div>

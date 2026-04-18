@@ -1,0 +1,38 @@
+title: Regalis Japan Group株式会社
+description: "Regalis Japan Group株式会社の公式コーポレートサイト。AI/DXコンサルティング・Web制作・販売促進・メディア運営代行・オーダースーツなど多角経営を展開。"
+url: "https://regalis-co.com"
+baseurl: ""
+timezone: Asia/Tokyo
+
+# Theme
+theme: null
+layouts_dir: _layouts
+includes_dir: _includes
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: corp
+
+# Include static assets
+include:
+  - images
+  - assets
+
+exclude:
+  - node_modules
+  - vendor
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - .git
+  - .gitignore
+  - README.md
+  - "*.docx"
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM

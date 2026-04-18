@@ -1,0 +1,45 @@
+- id: inoue-kanta
+  name: 井上 幹太
+  name_en: Kanta Inoue
+  role: 代表取締役
+  role_en: CEO & Founder
+  bio: |
+    フィンランド・Aalto Universityにてデザイン思考を修め、アルヴァ・アアルトの「自然と文化が調和する個性表現」に影響を受ける。帰国後、京都の職人文化と東京のモダンな審美眼を融合させる事業構想を持ち、Regalis Japan Group株式会社を創業。オーダースーツ事業を起点に、AI/DXコンサルティング・Web制作・学生支援など多角経営を推進。「経営と現場と次世代を、テクノロジーと品格でつなぐ」をグループの基軸に据える。
+  bio_short: Aalto大学でデザイン思考を修め帰国後に創業。京都の職人文化と東京のモダン美学を融合させた多角経営を推進。
+  businesses:
+    - order-suits
+    - dx-consulting
+    - web-development
+    - talent
+  sns:
+    x: https://twitter.com/
+    instagram: https://instagram.com/
+  photo: /images/_顔写真_ビジネス用黒服-背景白.png
+  photo_hero: /images/kanta_kyoto-suits.jpg
+  photo_formal: /images/【顔写真】井上幹太_スイス国連.jpg
+
+- id: mishima-daiki
+  name: 三島 大毅
+  name_en: Daiki Mishima
+  role: 取締役
+  role_en: Director
+  bio: |
+    事業開発・販売促進領域を担当。グループの営業戦略・パートナー開拓を統括し、多角事業間のシナジー創出を推進する。
+  bio_short: 事業開発・販売促進領域を統括。グループのパートナー開拓とシナジー創出を担う。
+  businesses:
+    - sales-promotion
+    - media-operation
+  photo: ""
+
+- id: horiuchi-fumito
+  name: 堀内 文翔
+  name_en: Fumito Horiuchi
+  role: 取締役
+  role_en: Director
+  bio: |
+    テクノロジー・デジタル領域を担当。AI/DXコンサルティングおよびWebサイト開発事業の技術面を牽引し、グループ全体のデジタルトランスフォーメーションを推進する。
+  bio_short: AI/DX・Web開発領域を技術面から牽引。グループ全体のデジタル変革を推進する。
+  businesses:
+    - dx-consulting
+    - web-development
+  photo: ""
