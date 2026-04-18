@@ -1,830 +1,545 @@
 ---
 layout: corp
-title: "トップ"
-meta_title: "Regalis Japan Group株式会社 | あなたが主役の時代をつくる。"
-description: "機会建築家・井上幹太が率いるRegalis Japan Group。AI・DXコンサル、学生機会創出、代表発信の3事業で、企業と次世代の変革を設計します。"
-og_image: /images/Brand-Cover.png
+title: "Regalis Japan Group"
+meta_title: "Regalis Japan Group | The Opportunity Architect"
+description: "Regalis Japan Group株式会社。代表・井上幹太は12年の不登校を経てGoogle AI第一期アンバサダー、20歳でCEOに。PRAXIS・ACADEMIA・ORATIOの三事業で機会を建築します。"
+og_type: "website"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://regalis-co.com/#org",
+        "name": "Regalis Japan Group 株式会社",
+        "alternateName": "Regalis Japan Group K.K.",
+        "url": "https://regalis-co.com/",
+        "logo": "https://regalis-co.com/images/rogo.new_transpalent-Photoroom.png",
+        "foundingDate": "2025-11-21",
+        "founder": { "@type": "Person", "name": "井上 幹太", "alternateName": "Kanta Inoue" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "麹町6丁目2-1 麹町サイトビル6階 ROOM Z",
+          "addressLocality": "千代田区",
+          "addressRegion": "東京都",
+          "postalCode": "102-0083",
+          "addressCountry": "JP"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://regalis-co.com/#founder",
+        "name": "井上 幹太",
+        "alternateName": "Kanta Inoue",
+        "jobTitle": "代表取締役社長 / Opportunity Architect",
+        "worksFor": { "@id": "https://regalis-co.com/#org" }
+      }
+    ]
+  }
+  </script>
 ---
 
-<!-- ================================================================
-  HERO — 「あなたが主役の時代をつくる。」
-  ================================================================ -->
-<section class="corp-hero" id="hero">
-  <div class="corp-hero__grid"></div>
-
-  <!-- 代表写真（右側） -->
-  <div class="hero-photo-wrap" aria-hidden="false">
-    <img src="{{ '/images/_顔写真_ビジネス用黒服-背景白.png' | relative_url }}"
-         alt="代表取締役 井上幹太"
-         class="hero-photo">
-    <div class="hero-photo-caption">
-      <span class="hero-photo-caption__name">井上 幹太</span>
-      <span class="hero-photo-caption__title">機会建築家 / 代表取締役</span>
-    </div>
-  </div>
-
-  <div class="corp-hero__content">
-    <!-- バッジ -->
-    <div class="hero-badge reveal">
-      <span class="hero-badge__dot"></span>
-      <span class="hero-badge__text">機会建築家 / Opportunity Architect</span>
-    </div>
-
-    <!-- メインコピー -->
-    <h1 class="hero-heading reveal reveal--delay-1">
-      <span class="hero-heading__jp">あなたが主役の<br>時代をつくる。</span>
-      <span class="hero-heading__en">Opportunity Architecture</span>
-    </h1>
-
-    <p class="hero-lead reveal reveal--delay-2">
-      不登校12年から、20歳で持株会社CEO。<br>
-      人生の全てを「機会の設計」に捧げてきた建築家が、<br>
-      あなたの企業と次世代の未来を設計します。
-    </p>
-
-    <div class="hero-cta reveal reveal--delay-3">
-      <a href="{{ '/about/ceo.html' | relative_url }}" class="corp-btn corp-btn--gold">代表のストーリーを見る</a>
-      <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--outline">無料相談はこちら</a>
-    </div>
-
-    <div class="hero-vertical-text" aria-hidden="true">
-      <span>Regalis Japan Group</span>
-      <span class="hero-vertical-text__line"></span>
-      <span>機会建築家の会社</span>
-    </div>
-  </div>
-
-  <div class="corp-hero__scroll">Scroll</div>
-</section>
-
-<!-- ================================================================
-  実績数字ストリップ
-  ================================================================ -->
-<div class="corp-stat-row">
-  <div class="corp-stat reveal">
-    <div class="corp-stat__num">12</div>
-    <div class="corp-stat__label">年間の不登校経験</div>
-  </div>
-  <div class="corp-stat reveal reveal--delay-1">
-    <div class="corp-stat__num">14</div>
-    <div class="corp-stat__label">歳で経済的独立</div>
-  </div>
-  <div class="corp-stat reveal reveal--delay-2">
-    <div class="corp-stat__num">20</div>
-    <div class="corp-stat__label">歳で持株会社設立</div>
-  </div>
-  <div class="corp-stat reveal reveal--delay-3">
-    <div class="corp-stat__num">3</div>
-    <div class="corp-stat__label">つの機会建築事業</div>
-  </div>
-</div>
-
-<!-- ================================================================
-  CEOストーリー — タイムライン
-  ================================================================ -->
-<section class="corp-section corp-section--dark" id="story">
-  <div class="corp-container">
-    <div class="reveal" style="margin-bottom: 64px;">
-      <span class="corp-kicker">代表のストーリー</span>
-      <h2 class="corp-h2 corp-h2--light">機会を建築してきた、<br>20年間の軌跡。</h2>
-      <p style="color: var(--tx-sub); font-size: 15px; margin-top: 16px; max-width: 600px; line-height: 2;">
-        偶然の羅列ではなく、「機会が届いていない場所に、機会を設計し直す」という
-        一つの動詞で完全に統合できる人生です。
-      </p>
-    </div>
-
-    <div class="opportunity-timeline">
-      {% assign ceo = site.data.members | first %}
-      {% for item in ceo.timeline %}
-      <div class="opportunity-timeline__item reveal reveal--delay-{{ forloop.index }}">
-        <div class="opportunity-timeline__age">{{ item.age }}</div>
-        <div class="opportunity-timeline__content">
-          <h3 class="opportunity-timeline__title">{{ item.title }}</h3>
-          <p class="opportunity-timeline__body">{{ item.body }}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <div style="margin-top: 56px; text-align: center;" class="reveal">
-      <a href="{{ '/about/ceo.html' | relative_url }}" class="corp-btn corp-btn--outline">代表の全ストーリーを読む →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-  3つの事業柱
-  ================================================================ -->
-<section class="corp-section" id="business">
-  <div class="corp-container">
-    <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom: 64px;">
-      <div class="reveal">
-        <span class="corp-kicker">3つの機会建築事業</span>
-        <h2 class="corp-h2 corp-h2--light">企業・次世代・社会。<br>三者を繋ぐ、循環構造。</h2>
-      </div>
-      <a href="{{ '/business/' | relative_url }}" class="corp-btn corp-btn--outline reveal">グループ全事業を見る →</a>
-    </div>
-
-    <div class="featured-business-grid">
-      {% assign featured = site.data.businesses | where: "featured", true %}
-      {% for biz in featured %}
-      <a href="{{ biz.url | relative_url }}" class="featured-biz-card reveal reveal--delay-{{ forloop.index }}" data-biz="{{ biz.id }}">
-        <div class="featured-biz-card__brand">{{ biz.brand }}</div>
-        <div class="featured-biz-card__title">{{ biz.title }}</div>
-        <p class="featured-biz-card__tagline">「{{ biz.tagline }}」</p>
-        <div class="featured-biz-card__target">対象: {{ biz.target }}</div>
-        <div class="featured-biz-card__loop">
-          <span class="loop-badge">{{ biz.loop_role }}</span>
-          <p>{{ biz.loop_desc }}</p>
-        </div>
-        <span class="featured-biz-card__cta">{{ biz.cta }} →</span>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-  Opportunity Loop — 循環図解
-  ================================================================ -->
-<section class="corp-section corp-section--deeper" id="loop">
-  <div class="corp-container">
-    <div class="reveal" style="text-align:center; margin-bottom: 64px;">
-      <span class="corp-kicker">Opportunity Loop</span>
-      <h2 class="corp-h2 corp-h2--light">なぜ、この3つが繋がるのか。</h2>
-      <p style="color: var(--tx-sub); font-size: 15px; margin-top: 16px; max-width: 640px; margin-left: auto; margin-right: auto; line-height: 2.2;">
-        この循環が成立する唯一の理由は、3つの事業が
-        <strong style="color: var(--tx-bright);">代表1人の人生で完全に接続されている</strong>からです。
-        大手コンサルは学生ネットワークを持たず、学生団体は企業実装を語れない。
-      </p>
-    </div>
-
-    <div class="opp-loop reveal">
-      <div class="opp-loop__node opp-loop__node--oratio">
-        <div class="opp-loop__label">ORATIO</div>
-        <div class="opp-loop__name">代表発信</div>
-        <div class="opp-loop__role">需要エンジン</div>
-      </div>
-      <div class="opp-loop__arrow opp-loop__arrow--right">
-        <span>認知→問い合わせ</span>
-      </div>
-      <div class="opp-loop__node opp-loop__node--praxis">
-        <div class="opp-loop__label">PRAXIS</div>
-        <div class="opp-loop__name">企業AI・DX支援</div>
-        <div class="opp-loop__role">売上エンジン</div>
-      </div>
-      <div class="opp-loop__arrow opp-loop__arrow--right">
-        <span>案件→学生派遣</span>
-      </div>
-      <div class="opp-loop__node opp-loop__node--academia">
-        <div class="opp-loop__label">ACADEMIA</div>
-        <div class="opp-loop__name">学生機会創出</div>
-        <div class="opp-loop__role">社会的資本エンジン</div>
-      </div>
-      <div class="opp-loop__arrow opp-loop__arrow--bottom">
-        <span>挑戦→発信素材</span>
-      </div>
-    </div>
-
-    <div style="max-width: 800px; margin: 48px auto 0; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;">
-      <div class="loop-explain reveal reveal--delay-1">
-        <div class="loop-explain__arrow">ORATIO → PRAXIS</div>
-        <p>代表がメディア・YouTube・講演で語る → 経営者の目に触れる → 広告費ゼロのリード獲得。</p>
-      </div>
-      <div class="loop-explain reveal reveal--delay-2">
-        <div class="loop-explain__arrow">PRAXIS → ACADEMIA</div>
-        <p>Praxis案件にAcademiaの学生をインターンとして送り込む → 企業は若い才能に、学生は実戦経験に。</p>
-      </div>
-      <div class="loop-explain reveal reveal--delay-3">
-        <div class="loop-explain__arrow">ACADEMIA → ORATIO</div>
-        <p>学生がAI実装に挑戦するストーリーが、代表の次の発信素材になる。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-  代表紹介カード（中間CTA）
-  ================================================================ -->
-<section class="corp-section corp-section--surface" id="ceo-card">
-  <div class="corp-container">
-    <div class="ceo-card reveal">
-      <div class="ceo-card__photo">
-        <img src="{{ '/images/kanta_kyoto-suits.jpg' | relative_url }}" alt="代表取締役 井上幹太 京都にて">
-      </div>
-      <div class="ceo-card__body">
-        <div class="ceo-card__position">機会建築家 / Opportunity Architect</div>
-        <h2 class="ceo-card__name">井上 幹太</h2>
-        <div class="ceo-card__role">代表取締役 CEO & Founder</div>
-        <blockquote class="ceo-card__quote">
-          「12年間の不登校が、私を機会建築家にしました。
-          学校の外で経済を学び、海外で起業家精神を学び、
-          Googleが認めた初代AIアンバサダーとして動き、
-          20歳で持株会社を設立しました。
-          この会社は、私の人生の延長です。
-          あなたの機会を設計するために、存在しています。」
-        </blockquote>
-        <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px;">
-          <a href="{{ '/about/ceo.html' | relative_url }}" class="corp-btn corp-btn--gold">詳細プロフィールへ</a>
-          <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--outline">直接相談する</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-  オーガニックリード獲得 — 相談カテゴリ
-  ================================================================ -->
-<section class="corp-section corp-section--dark" id="consult">
-  <div class="corp-container">
-    <div class="reveal" style="text-align: center; margin-bottom: 64px;">
-      <span class="corp-kicker">まず、話してみてください。</span>
-      <h2 class="corp-h2 corp-h2--light">相談無料。<br>30分のオンライン対話から始まります。</h2>
-    </div>
-
-    <div class="consult-grid">
-      <a href="{{ '/contact/?type=praxis' | relative_url }}" class="consult-card consult-card--praxis reveal">
-        <div class="consult-card__icon">🏢</div>
-        <div class="consult-card__label">企業の方へ</div>
-        <h3 class="consult-card__title">AI・DX導入の相談</h3>
-        <p class="consult-card__desc">補助金活用・業務自動化・DX戦略。まず現状をお聞かせください。</p>
-        <span class="consult-card__cta">無料相談を予約する →</span>
-      </a>
-
-      <a href="{{ '/contact/?type=academia' | relative_url }}" class="consult-card consult-card--academia reveal reveal--delay-1">
-        <div class="consult-card__icon">🎓</div>
-        <div class="consult-card__label">学生・若者の方へ</div>
-        <h3 class="consult-card__title">アンバサダーへの参加</h3>
-        <p class="consult-card__desc">不登校・進路・キャリアの悩み。AI実装を実戦で学ぶ機会があります。</p>
-        <span class="consult-card__cta">参加を検討する →</span>
-      </a>
-
-      <a href="{{ '/contact/?type=oratio' | relative_url }}" class="consult-card consult-card--oratio reveal reveal--delay-2">
-        <div class="consult-card__icon">🎤</div>
-        <div class="consult-card__label">メディア・主催者の方へ</div>
-        <h3 class="consult-card__title">取材・登壇依頼</h3>
-        <p class="consult-card__desc">AI×教育・不登校×起業・次世代リーダーシップをテーマに登壇します。</p>
-        <span class="consult-card__cta">依頼フォームへ →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-  グループ後景事業（コンパクト表示）
-  ================================================================ -->
-<section class="corp-section corp-section--surface" id="ventures">
-  <div class="corp-container">
-    <div class="reveal" style="margin-bottom: 40px;">
-      <span class="corp-kicker">グループが持つ武器</span>
-      <h2 class="corp-h2 corp-h2--light" style="font-size: clamp(20px, 2.5vw, 28px);">前面3事業を支える、<br>5つのグループ事業。</h2>
-      <p style="color: var(--tx-sub); font-size: 13px; margin-top: 12px;">
-        必要に応じて前面3事業と組み合わせてご提供します。
-      </p>
-    </div>
-
-    <div class="background-ventures reveal">
-      {% assign background = site.data.businesses | where: "featured", false %}
-      {% for biz in background %}
-      <div class="background-venture-chip" data-status="{{ biz.status }}">
-        <span class="bv-brand">{{ biz.brand }}</span>
-        <span class="bv-title">{{ biz.title }}</span>
-        {% if biz.status == "coming_soon" %}
-        <span class="bv-badge">Coming Soon</span>
-        {% elsif biz.note %}
-        <span class="bv-note">{{ biz.note }}</span>
-        {% endif %}
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-  フッター直前CTA
-  ================================================================ -->
-<div class="corp-cta-block">
-  <p class="corp-kicker" style="justify-content:center;">今日、最初の一歩を踏み出す。</p>
-  <h2 class="corp-cta-block__heading reveal">機会は与えられるものではなく、<br>建築するものです。</h2>
-  <p class="corp-cta-block__sub reveal reveal--delay-1">
-    まず30分、対話しましょう。それが最初の機会建築です。
-  </p>
-  <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--gold reveal reveal--delay-2" style="font-size:12px; padding:18px 56px; letter-spacing: 0.15em;">
-    無料相談を申し込む
-  </a>
-</div>
-
 <style>
-/* ── ファーストビュー ── */
-.corp-hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
-.corp-hero__content { position: relative; z-index: 2; max-width: 580px; }
+/* ── Home-specific ─────────────────────────────────────────── */
 
-.hero-photo-wrap {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 45%;
-  max-width: 480px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
+.home-hero {
+  padding: 140px var(--section-px) 100px;
+  border-bottom: 0.5px solid var(--regalis-line);
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
   align-items: center;
 }
-.hero-photo {
+
+@media (max-width: 900px) {
+  .home-hero { grid-template-columns: 1fr; gap: 48px; padding-top: 120px; }
+  .home-hero__photo-block { order: -1; }
+}
+
+.home-hero__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--regalis-gold);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-hero__label::before,
+.home-hero__label::after { content: '―'; opacity: 0.35; }
+
+.home-hero__founder {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.home-hero__photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 0.5px solid var(--regalis-line);
+}
+
+.home-hero__name {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--regalis-warm-gray);
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.home-hero__headline {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 76px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--regalis-ink);
+  margin-bottom: 16px;
+}
+
+.home-hero__headline em {
+  font-style: italic;
+  color: var(--regalis-gold);
+}
+
+.home-hero__sub {
+  font-family: var(--font-body-jp);
+  font-size: 17px;
+  color: var(--regalis-warm-gray);
+  margin-bottom: 40px;
+  letter-spacing: 0.08em;
+}
+
+.home-hero__story {
+  font-size: 14px;
+  line-height: 2.1;
+  color: var(--regalis-mute);
+  max-width: 440px;
+  border-left: 0.5px solid var(--regalis-line);
+  padding-left: 24px;
+  margin-bottom: 40px;
+}
+
+.home-hero__story p + p { margin-top: 14px; }
+
+.home-hero__photo-block { position: relative; }
+
+.home-hero__photo-large {
   width: 100%;
-  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: top center;
-  max-height: 85vh;
-  mask-image: linear-gradient(to top, transparent 0%, black 20%);
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%);
-  filter: grayscale(20%) contrast(1.05);
 }
-.hero-photo-caption {
+
+.home-hero__photo-caption {
   position: absolute;
-  bottom: 40px;
-  right: 20px;
-  text-align: right;
-  font-family: var(--ff-mono);
-}
-.hero-photo-caption__name {
-  display: block;
-  font-size: 11px;
-  color: var(--gold);
-  letter-spacing: 0.2em;
-}
-.hero-photo-caption__title {
-  display: block;
+  bottom: 16px;
+  right: 16px;
+  font-family: var(--font-mono);
   font-size: 9px;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.15em;
-  margin-top: 4px;
-}
-
-.hero-heading { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
-.hero-heading__jp {
-  font-family: var(--ff-serif);
-  font-size: clamp(36px, 5.5vw, 72px);
-  font-weight: 400;
-  line-height: 1.3;
-  color: #fff;
-  letter-spacing: 0.04em;
-}
-.hero-heading__en {
-  font-family: var(--ff-display);
-  font-size: clamp(10px, 1.2vw, 14px);
-  color: rgba(201,162,75,0.6);
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.hero-lead {
-  font-family: var(--ff-serif);
-  font-size: clamp(13px, 1.5vw, 16px);
+  letter-spacing: 0.2em;
   color: rgba(255,255,255,0.55);
-  line-height: 2.2;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.3);
+  padding: 4px 8px;
+}
+
+/* 4-point timeline bar */
+.home-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .home-timeline { grid-template-columns: repeat(2, 1fr); }
+}
+
+.home-timeline__item {
+  padding: 32px 28px;
+  border-right: 0.5px solid var(--regalis-line);
+  border-top: 0.5px solid var(--regalis-line);
+}
+
+.home-timeline__item:last-child { border-right: none; }
+
+@media (max-width: 768px) {
+  .home-timeline__item:nth-child(2) { border-right: none; }
+  .home-timeline__item:nth-child(3),
+  .home-timeline__item:nth-child(4) { border-top: 0.5px solid var(--regalis-line); }
+}
+
+.home-timeline__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--regalis-gold);
+  margin-bottom: 14px;
+}
+
+.home-timeline__item--current .home-timeline__dot {
+  background: transparent;
+  border: 1.5px solid var(--regalis-gold);
+  box-shadow: 0 0 0 3px rgba(201,162,75,0.12);
+}
+
+.home-timeline__year {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--regalis-gold);
+  margin-bottom: 8px;
+}
+
+.home-timeline__event {
+  font-size: 13px;
+  color: var(--regalis-ink);
+  line-height: 1.7;
+}
+
+/* Three Pillars */
+.home-pillars__header {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--section-py) var(--section-px) 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 0.5px solid var(--regalis-line);
+}
+
+.home-pillars__list {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--section-px);
+}
+
+/* Opportunity Loop */
+.home-loop {
+  background: var(--bg-ivory);
+  padding: var(--section-py) var(--section-px);
+  border-top: 0.5px solid var(--regalis-line);
+  border-bottom: 0.5px solid var(--regalis-line);
+}
+
+.home-loop__inner {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-loop__title {
+  font-family: var(--font-body-jp);
+  font-size: clamp(16px, 2vw, 21px);
+  color: var(--regalis-ink);
+  margin: 20px 0 12px;
+  font-weight: 500;
+}
+
+.home-loop__desc {
+  font-size: 14px;
+  color: var(--regalis-warm-gray);
+  line-height: 2;
   margin-bottom: 48px;
 }
 
-.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 14px 6px 10px;
-  border: 1px solid rgba(201,162,75,0.25);
-  border-radius: 100px;
-  margin-bottom: 32px;
-}
-.hero-badge__dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 8px var(--gold);
-  animation: badgePulse 2.5s ease-in-out infinite;
-}
-.hero-badge__text {
-  font-family: var(--ff-mono);
-  font-size: 9px;
-  letter-spacing: 0.2em;
-  color: rgba(201,162,75,0.8);
-  text-transform: uppercase;
-}
-@keyframes badgePulse {
-  0%,100% { opacity:0.6; transform:scale(1); }
-  50%      { opacity:1;   transform:scale(1.3); }
-}
-
-.hero-vertical-text {
-  position: absolute;
-  right: 48%;
-  bottom: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--ff-mono);
-  font-size: 8px;
-  letter-spacing: 0.25em;
-  color: rgba(255,255,255,0.15);
-  writing-mode: vertical-rl;
-}
-.hero-vertical-text__line {
-  width: 1px; height: 48px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.12), transparent);
-}
-
-/* ── タイムライン ── */
-.opportunity-timeline {
-  position: relative;
-  padding-left: 32px;
-}
-.opportunity-timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  bottom: 8px;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--gold), rgba(201,162,75,0.1));
-}
-.opportunity-timeline__item {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line-dark);
-  position: relative;
-}
-.opportunity-timeline__item::before {
-  content: '';
-  position: absolute;
-  left: -36px;
-  top: 28px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 8px rgba(201,162,75,0.4);
-}
-.opportunity-timeline__item:last-child { border-bottom: none; }
-.opportunity-timeline__age {
-  font-family: var(--ff-mono);
-  font-size: 12px;
-  color: var(--gold);
-  letter-spacing: 0.1em;
-  flex-shrink: 0;
-  width: 56px;
-  padding-top: 2px;
-}
-.opportunity-timeline__content { flex: 1; }
-.opportunity-timeline__title {
-  font-family: var(--ff-serif);
-  font-size: 17px;
-  color: var(--tx-bright);
-  margin-bottom: 8px;
-  font-weight: 400;
-}
-.opportunity-timeline__body {
-  font-size: 13px;
-  color: var(--tx-sub);
-  line-height: 1.9;
-}
-
-/* ── 前景3事業グリッド ── */
-.featured-business-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.featured-biz-card {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 32px 28px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--line-dark);
-  text-decoration: none;
-  transition: border-color var(--dur-mid), background var(--dur-mid), transform var(--dur-mid);
-  position: relative;
-  overflow: hidden;
-}
-.featured-biz-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-}
-[data-biz="praxis"].featured-biz-card::before { background: #2F7D4B; }
-[data-biz="academia"].featured-biz-card::before { background: #C75A1A; }
-[data-biz="oratio"].featured-biz-card::before { background: #C9A24B; }
-
-.featured-biz-card:hover {
-  background: rgba(255,255,255,0.05);
-  transform: translateY(-4px);
-  border-color: rgba(255,255,255,0.12);
-}
-.featured-biz-card__brand {
-  font-family: var(--ff-mono);
-  font-size: 9px;
-  letter-spacing: 0.3em;
-  color: var(--gold);
-  opacity: 0.7;
-  text-transform: uppercase;
-}
-.featured-biz-card__title {
-  font-family: var(--ff-serif);
-  font-size: 19px;
-  color: var(--tx-bright);
-  font-weight: 400;
-}
-.featured-biz-card__tagline {
-  font-size: 13px;
-  color: var(--tx-sub);
-  font-style: italic;
-  line-height: 1.7;
-}
-.featured-biz-card__target {
-  font-family: var(--ff-mono);
-  font-size: 10px;
-  color: rgba(255,255,255,0.3);
-  letter-spacing: 0.1em;
-}
-.featured-biz-card__loop {
-  border-top: 1px solid var(--line-dark);
-  padding-top: 16px;
-  margin-top: auto;
-}
-.loop-badge {
-  display: inline-block;
-  font-family: var(--ff-mono);
-  font-size: 8px;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  border: 1px solid rgba(201,162,75,0.3);
-  padding: 2px 8px;
-  margin-bottom: 8px;
-}
-.featured-biz-card__loop p {
-  font-size: 11px;
-  color: var(--tx-sub);
-  line-height: 1.8;
-}
-.featured-biz-card__cta {
-  font-family: var(--ff-mono);
-  font-size: 10px;
-  color: var(--gold);
-  letter-spacing: 0.15em;
-  margin-top: 8px;
-}
-
-/* ── Opportunity Loop 図解 ── */
-.opp-loop {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
-  max-width: 900px;
+/* Journal */
+.home-journal {
+  max-width: var(--max-w);
   margin: 0 auto;
-  position: relative;
+  padding: var(--section-py) var(--section-px);
 }
-.opp-loop__node {
+
+.home-journal__header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 1px solid;
-  text-align: center;
-  padding: 24px;
-  position: relative;
-  z-index: 1;
-}
-.opp-loop__node--oratio { border-color: rgba(201,162,75,0.5); background: rgba(201,162,75,0.05); }
-.opp-loop__node--praxis { border-color: rgba(47,125,75,0.5); background: rgba(47,125,75,0.05); }
-.opp-loop__node--academia { border-color: rgba(199,90,26,0.5); background: rgba(199,90,26,0.05); }
-
-.opp-loop__label {
-  font-family: var(--ff-mono);
-  font-size: 8px;
-  letter-spacing: 0.3em;
-  color: var(--gold);
-  opacity: 0.7;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
-.opp-loop__name {
-  font-family: var(--ff-serif);
-  font-size: 14px;
-  color: var(--tx-bright);
-  line-height: 1.4;
-  margin-bottom: 6px;
-}
-.opp-loop__role {
-  font-size: 10px;
-  color: var(--tx-sub);
-  line-height: 1.5;
-}
-.opp-loop__arrow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  color: rgba(255,255,255,0.2);
-  font-family: var(--ff-mono);
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  text-align: center;
-  gap: 6px;
-}
-.opp-loop__arrow::before {
-  content: '→';
-  font-size: 20px;
-  color: rgba(201,162,75,0.4);
-}
-.opp-loop__arrow--bottom::before { content: '↙'; }
-
-.loop-explain {
-  padding: 20px;
-  border-left: 2px solid var(--line-gold);
-}
-.loop-explain__arrow {
-  font-family: var(--ff-mono);
-  font-size: 10px;
-  color: var(--gold);
-  letter-spacing: 0.1em;
-  margin-bottom: 10px;
-}
-.loop-explain p {
-  font-size: 12px;
-  color: var(--tx-sub);
-  line-height: 1.9;
-}
-
-/* ── 代表カード ── */
-.ceo-card {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 64px;
-  align-items: center;
-}
-.ceo-card__photo {
-  position: relative;
-  border-radius: 2px;
-  overflow: hidden;
-}
-.ceo-card__photo img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  object-position: top center;
-  filter: grayscale(15%) contrast(1.05);
-}
-.ceo-card__position {
-  font-family: var(--ff-mono);
-  font-size: 9px;
-  letter-spacing: 0.3em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.ceo-card__name {
-  font-family: var(--ff-serif);
-  font-size: clamp(28px, 4vw, 48px);
-  color: var(--tx-bright);
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  margin-bottom: 4px;
-}
-.ceo-card__role {
-  font-family: var(--ff-mono);
-  font-size: 11px;
-  color: var(--tx-sub);
-  letter-spacing: 0.15em;
+  align-items: flex-end;
+  justify-content: space-between;
   margin-bottom: 32px;
 }
-.ceo-card__quote {
-  border-left: 2px solid var(--gold);
-  padding-left: 24px;
-  margin: 0;
-  font-family: var(--ff-serif);
-  font-size: 15px;
-  color: rgba(255,255,255,0.6);
-  line-height: 2.2;
-  font-style: normal;
-}
 
-/* ── 相談カード ── */
-.consult-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.consult-card {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 36px 28px;
-  border: 1px solid var(--line-dark);
-  text-decoration: none;
-  transition: border-color var(--dur-mid), transform var(--dur-mid);
-  background: rgba(255,255,255,0.02);
-}
-.consult-card:hover {
-  transform: translateY(-4px);
-}
-.consult-card--praxis { border-top: 3px solid #2F7D4B; }
-.consult-card--praxis:hover { border-color: #2F7D4B; }
-.consult-card--academia { border-top: 3px solid #C75A1A; }
-.consult-card--academia:hover { border-color: #C75A1A; }
-.consult-card--oratio { border-top: 3px solid #C9A24B; }
-.consult-card--oratio:hover { border-color: #C9A24B; }
-
-.consult-card__icon { font-size: 28px; }
-.consult-card__label {
-  font-family: var(--ff-mono);
-  font-size: 9px;
-  letter-spacing: 0.25em;
-  color: var(--tx-sub);
-  text-transform: uppercase;
-}
-.consult-card__title {
-  font-family: var(--ff-serif);
-  font-size: 18px;
-  color: var(--tx-bright);
-  font-weight: 400;
-}
-.consult-card__desc {
-  font-size: 13px;
-  color: var(--tx-sub);
-  line-height: 1.9;
-  flex: 1;
-}
-.consult-card__cta {
-  font-family: var(--ff-mono);
+.home-journal__more {
+  font-family: var(--font-mono);
   font-size: 10px;
-  color: var(--gold);
-  letter-spacing: 0.15em;
-  margin-top: auto;
-}
-
-/* ── 後景事業 ── */
-.background-ventures {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.background-venture-chip {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
-  border: 1px solid var(--line-dark);
-  opacity: 0.6;
-}
-.bv-brand {
-  font-family: var(--ff-mono);
-  font-size: 9px;
   letter-spacing: 0.2em;
-  color: var(--gold);
+  color: var(--regalis-gold);
   text-transform: uppercase;
 }
-.bv-title {
-  font-size: 12px;
-  color: var(--tx-sub);
-}
-.bv-badge {
-  font-family: var(--ff-mono);
-  font-size: 8px;
-  padding: 2px 8px;
-  border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.3);
-  letter-spacing: 0.1em;
-}
-.bv-note {
-  font-size: 10px;
-  color: rgba(255,255,255,0.2);
+
+/* Group */
+.home-group {
+  border-top: 0.5px solid var(--regalis-line);
+  padding: 56px var(--section-px);
+  max-width: var(--max-w);
+  margin: 0 auto;
 }
 
-/* ── レスポンシブ ── */
-@media (max-width: 900px) {
-  .hero-photo-wrap { display: none; }
-  .featured-business-grid { grid-template-columns: 1fr; }
-  .consult-grid { grid-template-columns: 1fr; }
-  .ceo-card { grid-template-columns: 1fr; }
-  .ceo-card__photo { display: none; }
-  .opp-loop { flex-direction: column; gap: 16px; }
-  .opp-loop__arrow { transform: rotate(90deg); }
-  .loop-explain { grid-column: span 1; }
-  .opp-loop + div { grid-template-columns: 1fr !important; }
-  .hero-vertical-text { display: none; }
+.home-group__cap {
+  font-size: 12px;
+  color: var(--regalis-mute);
+  line-height: 1.85;
+  margin-top: 20px;
+  max-width: 520px;
+}
+
+/* Inquire */
+.home-inquire {
+  background: var(--regalis-ink);
+  padding: var(--section-py) var(--section-px);
+  text-align: center;
+}
+
+.home-inquire__title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.5vw, 56px);
+  font-weight: 300;
+  color: #F7F4EC;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.home-inquire__sub {
+  font-size: 14px;
+  color: rgba(247,244,236,0.45);
+  margin-bottom: 40px;
+  line-height: 2;
 }
 </style>
+
+<!-- ═══════════════════════════ 1. HERO ═══════════════════════════ -->
+<section>
+  <div class="home-hero">
+
+    <div>
+      <p class="home-hero__label corp-reveal">The Founder</p>
+
+      <div class="home-hero__founder corp-reveal" style="--d:0.05s">
+        <img src="{{ '/images/【顔写真】井上幹太_京都伏見.jpg' | relative_url }}"
+             alt="代表取締役 井上幹太"
+             class="home-hero__photo"
+             width="56" height="56">
+        <div class="home-hero__name">
+          KANTA INOUE &middot; 井上 幹太
+        </div>
+      </div>
+
+      <h1 class="home-hero__headline corp-reveal" style="--d:0.1s">
+        The<br>
+        <em>Opportunity</em><br>
+        Architect
+      </h1>
+
+      <p class="home-hero__sub corp-reveal" style="--d:0.14s">機会を、建築する。</p>
+
+      <div class="home-hero__story corp-reveal" style="--d:0.18s">
+        <p>
+          12年間、私は学校に通わなかった。<br>
+          14歳でWebライターとして独立し、<br>
+          Google AI第一期アンバサダーを経て、<br>
+          20歳でRegalis Japan Groupを設立した。
+        </p>
+        <p>
+          境界の外にいた12年が、<br>
+          いま、他者のための機会を設計する力になっている。
+        </p>
+      </div>
+
+      <div style="display:flex; gap:16px; flex-wrap:wrap;" class="corp-reveal" style="--d:0.22s">
+        <a href="{{ '/founder/' | relative_url }}" class="corp-btn corp-btn--gold">代表について →</a>
+        <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--outline">INQUIRE →</a>
+      </div>
+    </div>
+
+    <div class="home-hero__photo-block corp-reveal" style="--d:0.08s">
+      <img src="{{ '/images/【顔写真】井上幹太_スーツ京都.jpg' | relative_url }}"
+           alt="代表取締役 井上幹太"
+           class="home-hero__photo-large"
+           width="540" height="720"
+           loading="eager">
+      <span class="home-hero__photo-caption">Kyoto, 2025</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ 2. TIMELINE ═══════════════════════ -->
+<div class="home-timeline">
+  <div class="home-timeline__item corp-reveal">
+    <div class="home-timeline__dot"></div>
+    <div class="home-timeline__year">0 〜 18歳</div>
+    <div class="home-timeline__event">12年間の不登校。既存の制度の外に居続けた。</div>
+  </div>
+  <div class="home-timeline__item corp-reveal" style="--d:0.06s">
+    <div class="home-timeline__dot"></div>
+    <div class="home-timeline__year">14歳</div>
+    <div class="home-timeline__event">独立系Webライターとして経済的自立。国際経済オリンピック日本代表選考 3位。</div>
+  </div>
+  <div class="home-timeline__item corp-reveal" style="--d:0.12s">
+    <div class="home-timeline__dot"></div>
+    <div class="home-timeline__year">19歳</div>
+    <div class="home-timeline__event">Google AI Ambassador 第一期。学生団体3つを創業。</div>
+  </div>
+  <div class="home-timeline__item home-timeline__item--current corp-reveal" style="--d:0.18s">
+    <div class="home-timeline__dot"></div>
+    <div class="home-timeline__year">20歳 — 現在</div>
+    <div class="home-timeline__event">Regalis Japan Group 代表取締役就任。ZEN大学 特待生。TIESBRICK所属タレント。</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ 3. THREE PILLARS ══════════════════ -->
+<div class="home-pillars__header corp-reveal">
+  <div>
+    <p class="corp-kicker">The Three Pillars</p>
+    <h2 class="corp-h2">三事業</h2>
+  </div>
+  <a href="{{ '/business/' | relative_url }}" class="home-journal__more">全事業を見る →</a>
+</div>
+
+<div class="home-pillars__list">
+  <a href="{{ '/business/praxis/' | relative_url }}" class="pillar-card corp-reveal">
+    <div><div class="pillar-card__numeral">I</div></div>
+    <div class="pillar-card__body">
+      <div>
+        <span class="pillar-card__category">AI/DX Consulting · PRAXIS</span>
+        <div class="pillar-card__name">企業の機会を、AIで実装する。</div>
+      </div>
+      <p class="pillar-card__description">机上のコンサルではない、実装するコンサル。生成AI・DX・補助金申請まで一気通貫で伴走する。</p>
+    </div>
+    <div class="pillar-card__cta">ENTER →</div>
+  </a>
+
+  <a href="{{ '/business/academia/' | relative_url }}" class="pillar-card corp-reveal" style="--d:0.06s">
+    <div><div class="pillar-card__numeral">II</div></div>
+    <div class="pillar-card__body">
+      <div>
+        <span class="pillar-card__category">Student Opportunities · ACADEMIA</span>
+        <div class="pillar-card__name">次世代の機会を、仕組みで届ける。</div>
+      </div>
+      <p class="pillar-card__description">日本学生アンバサダー協会を核に、Z世代・不登校経験者に選択肢と実績を届ける。</p>
+    </div>
+    <div class="pillar-card__cta">ENTER →</div>
+  </a>
+
+  <a href="{{ '/business/oratio/' | relative_url }}" class="pillar-card corp-reveal" style="--d:0.12s">
+    <div><div class="pillar-card__numeral">III</div></div>
+    <div class="pillar-card__body">
+      <div>
+        <span class="pillar-card__category">CEO Thought Leadership · ORATIO</span>
+        <div class="pillar-card__name">語る経営者、届く言葉。</div>
+      </div>
+      <p class="pillar-card__description">「不登校×AI×起業」という唯一の文脈から、次世代リーダーシップを発信。メディア・登壇・YouTube。</p>
+    </div>
+    <div class="pillar-card__cta">ENTER →</div>
+  </a>
+</div>
+
+<!-- ═══════════════════════════ 4. OPPORTUNITY LOOP ══════════════ -->
+<div class="home-loop">
+  <div class="home-loop__inner">
+    <p class="corp-kicker corp-reveal">Opportunity Loop</p>
+    <h2 class="home-loop__title corp-reveal" style="--d:0.06s">三事業は独立していない、循環している。</h2>
+    <p class="home-loop__desc corp-reveal" style="--d:0.1s">
+      ORATIOで築いた信頼がPRAXISへの相談を生む。<br>
+      PRAXISの実装経験がACADEMIAの学生に機会を届ける。<br>
+      ACADEMIAの物語がORATIOのコンテンツになる。
+    </p>
+
+    <div class="opp-loop corp-stagger">
+      <div class="opp-loop__node">
+        <span class="opp-loop__label">発信</span>
+        <span class="opp-loop__name">ORATIO</span>
+        <span class="opp-loop__desc">語り、信頼を積む</span>
+      </div>
+      <span class="opp-loop__arrow">→</span>
+      <div class="opp-loop__node">
+        <span class="opp-loop__label">実装</span>
+        <span class="opp-loop__name">PRAXIS</span>
+        <span class="opp-loop__desc">AIを、実装する</span>
+      </div>
+      <span class="opp-loop__arrow">→</span>
+      <div class="opp-loop__node">
+        <span class="opp-loop__label">育成</span>
+        <span class="opp-loop__name">ACADEMIA</span>
+        <span class="opp-loop__desc">機会を、届ける</span>
+      </div>
+      <span class="opp-loop__arrow">→</span>
+      <div class="opp-loop__node" style="border-color:rgba(201,162,75,0.35);">
+        <span class="opp-loop__label">再び</span>
+        <span class="opp-loop__name" style="color:var(--regalis-gold);">ORATIO</span>
+        <span class="opp-loop__desc">物語が生まれる</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ 5. JOURNAL ════════════════════════ -->
+<div class="home-journal">
+  <div class="home-journal__header corp-reveal">
+    <div>
+      <p class="corp-kicker">Latest Journal</p>
+      <h2 class="corp-h2">最新記事</h2>
+    </div>
+    <a href="{{ '/journal/' | relative_url }}" class="home-journal__more">全記事を読む →</a>
+  </div>
+
+  <div class="journal-grid corp-stagger">
+    <a href="{{ '/journal/' | relative_url }}" class="journal-card">
+      <span class="journal-card__cat">AI & DX</span>
+      <span class="journal-card__title">中小企業が生成AIで最初に自動化すべき3業務</span>
+      <span class="journal-card__date">近日公開</span>
+    </a>
+    <a href="{{ '/journal/' | relative_url }}" class="journal-card">
+      <span class="journal-card__cat">Founder's Voice</span>
+      <span class="journal-card__title">12年間学校に行かなかった僕が「機会建築家」を名乗る理由</span>
+      <span class="journal-card__date">近日公開</span>
+    </a>
+    <a href="{{ '/journal/' | relative_url }}" class="journal-card">
+      <span class="journal-card__cat">Student & Next Gen</span>
+      <span class="journal-card__title">学生アンバサダー制度はなぜ今、企業に必要なのか</span>
+      <span class="journal-card__date">近日公開</span>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ 6. GROUP VENTURES ════════════════ -->
+<div class="home-group corp-reveal">
+  <p class="corp-kicker">Group Ventures</p>
+  <div class="group-ventures" style="margin-top:16px;">
+    <span class="group-chip">Atelier — オーダースーツ</span>
+    <span class="group-chip">Codex — Web制作</span>
+    <span class="group-chip">Chronicle — メディア代行</span>
+    <span class="group-chip">Vanguard — 営業代行</span>
+    <span class="group-chip">Lumen — レーザー製品</span>
+  </div>
+  <p class="home-group__cap">
+    これらは既存クライアントおよびグループ企業向けに運用中の事業です。<br>
+    個別のご相談はお問い合わせフォームよりお願いいたします。
+  </p>
+</div>
+
+<!-- ═══════════════════════════ 7. INQUIRE ═══════════════════════ -->
+<div class="home-inquire">
+  <p class="corp-kicker" style="color:var(--regalis-gold);">Contact</p>
+  <h2 class="home-inquire__title corp-reveal">挑戦を、設計しませんか。</h2>
+  <p class="home-inquire__sub corp-reveal" style="--d:0.06s">
+    PRAXIS・ACADEMIA・ORATIOへのご相談、取材・講演依頼、その他のご要件はこちらから。
+  </p>
+  <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;" class="corp-reveal" style="--d:0.12s">
+    <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--ghost">INQUIRE →</a>
+    <a href="{{ '/contact/?type=praxis' | relative_url }}"
+       style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.2em; color:rgba(247,244,236,0.35); padding:14px 0; text-transform:uppercase;">
+      30分の無料相談 →
+    </a>
+  </div>
+</div>

@@ -1,40 +1,69 @@
-<footer class="corp-footer">
+<!-- Newsletter strip -->
+<div class="newsletter-strip">
+  <div class="newsletter-strip__inner">
+    <div>
+      <p class="newsletter-strip__label">Weekly Newsletter</p>
+      <p class="newsletter-strip__title">Regalis Insight — 週に一度、機会の設計図を届けます。</p>
+    </div>
+    <form class="newsletter-strip__form"
+          name="newsletter"
+          method="POST"
+          action="https://formspree.io/f/mvgvdaee">
+      <input type="hidden" name="purpose" value="newsletter">
+      <input type="text" name="_gotcha" style="display:none">
+      <input class="newsletter-strip__input"
+             type="email"
+             name="email"
+             required
+             placeholder="your@email.com"
+             aria-label="メールアドレス">
+      <button class="newsletter-strip__btn" type="submit">購読する →</button>
+    </form>
+  </div>
+</div>
+
+<footer class="corp-footer" role="contentinfo">
   <div class="corp-footer__inner">
-    <!-- ブランド -->
+
+    <!-- Col 1: Brand -->
     <div class="corp-footer__brand">
-      <a href="{{ '/' | relative_url }}">
-        <img src="{{ '/images/rogo.new_transpalent-Photoroom.png' | relative_url }}" alt="Regalis Japan Group">
+      <a href="{{ '/' | relative_url }}" aria-label="トップへ">
+        <img src="{{ '/images/rogo.new_transpalent-Photoroom.png' | relative_url }}"
+             alt="Regalis Japan Group"
+             width="120" height="32">
       </a>
       <p class="corp-footer__tagline">あなたが主役の時代をつくる。</p>
       <p>
-        Regalis Japan Group株式会社<br>
+        Regalis Japan Group 株式会社<br>
         〒102-0083 東京都千代田区麹町6丁目2-1<br>
-        麹町サイトビル6階 ／ 設立：2025年11月21日
+        麹町サイトビル6階 ROOM Z<br>
+        設立：2025年11月21日
       </p>
     </div>
 
-    <!-- 代表について -->
+    <!-- Col 2: Business -->
     <div class="corp-footer__col">
-      <h4>代表について</h4>
-      <ul>
-        <li><a href="{{ '/about/ceo.html' | relative_url }}">代表紹介</a></li>
-        <li><a href="{{ '/about/message.html' | relative_url }}">代表メッセージ</a></li>
-        <li><a href="{{ '/about/company.html' | relative_url }}">会社概要</a></li>
-      </ul>
-    </div>
-
-    <!-- 3つの事業 -->
-    <div class="corp-footer__col">
-      <h4>3つの事業</h4>
+      <h4>事業</h4>
       <ul>
         <li><a href="{{ '/business/praxis/' | relative_url }}">PRAXIS — AI・DXコンサル</a></li>
         <li><a href="{{ '/business/academia/' | relative_url }}">ACADEMIA — 学生機会創出</a></li>
         <li><a href="{{ '/business/oratio/' | relative_url }}">ORATIO — 代表発信・タレント</a></li>
-        <li><a href="{{ '/business/' | relative_url }}" style="opacity:0.5; font-size:12px;">グループ全事業を見る →</a></li>
+        <li><a href="{{ '/business/' | relative_url }}">グループ全事業 →</a></li>
       </ul>
     </div>
 
-    <!-- お問い合わせ -->
+    <!-- Col 3: Information -->
+    <div class="corp-footer__col">
+      <h4>情報</h4>
+      <ul>
+        <li><a href="{{ '/founder/' | relative_url }}">代表紹介</a></li>
+        <li><a href="{{ '/journal/' | relative_url }}">Journal</a></li>
+        <li><a href="{{ '/about/company.html' | relative_url }}">会社概要</a></li>
+        <li><a href="{{ '/about/company.html' | relative_url }}">アクセス</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Contact -->
     <div class="corp-footer__col">
       <h4>お問い合わせ</h4>
       <ul>
@@ -43,13 +72,26 @@
         <li><a href="{{ '/contact/?type=oratio' | relative_url }}">取材・登壇依頼</a></li>
         <li><a href="{{ '/contact/' | relative_url }}">その他のご相談</a></li>
       </ul>
+      <div style="margin-top:24px; display:flex; flex-direction:column; gap:8px;">
+        <a href="https://www.instagram.com/regalis.official.jp/" target="_blank" rel="noopener"
+           style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.15em; color:rgba(247,244,236,0.35);">
+          Instagram ↗
+        </a>
+        <a href="https://regalis-order-suits.com/" target="_blank" rel="noopener"
+           style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.15em; color:rgba(247,244,236,0.35);">
+          Atelier (スーツブランド) ↗
+        </a>
+      </div>
     </div>
+
   </div>
 
   <div class="corp-footer__bottom">
-    <span>&copy; {{ site.time | date: "%Y" }} Regalis Japan Group Co., Ltd. All Rights Reserved.</span>
-    <span>
-      <a href="https://regalis-order-suits.com/" target="_blank" rel="noopener">スーツブランドサイト（Regalis Order Suits）↗</a>
+    <span>&copy; {{ site.time | date: "%Y" }} Regalis Japan Group Co., Ltd.</span>
+    <span style="display:flex; gap:20px; flex-wrap:wrap;">
+      <a href="{{ '/privacy.html' | relative_url }}">Privacy</a>
+      <a href="{{ '/terms.html' | relative_url }}">Terms</a>
+      <a href="{{ '/sitemap.html' | relative_url }}">Sitemap</a>
     </span>
   </div>
 </footer>

@@ -1,0 +1,218 @@
+---
+layout: corp
+title: "Journal"
+meta_title: "Journal | Regalis Japan Group"
+description: "Regalis Japan GroupのJournal。AI・DX、代表の声、学生・次世代、ケーススタディの4カテゴリで、機会建築の知見を届けます。"
+---
+
+<style>
+.journal-hero {
+  background: var(--regalis-ink);
+  padding: 120px var(--section-px) 80px;
+  color: #F7F4EC;
+}
+
+.journal-hero__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.journal-cat-bar {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 24px var(--section-px);
+  display: flex;
+  gap: 0;
+  border-bottom: 0.5px solid var(--regalis-line);
+  overflow-x: auto;
+}
+
+.journal-cat-btn {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--regalis-warm-gray);
+  padding: 8px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color var(--dur-fast), border-color var(--dur-fast);
+}
+
+.journal-cat-btn:hover,
+.journal-cat-btn.is-active {
+  color: var(--regalis-gold);
+  border-bottom-color: var(--regalis-gold);
+}
+
+.journal-index {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--section-py) var(--section-px);
+}
+
+.journal-coming {
+  padding: 80px 0;
+  text-align: center;
+  color: var(--regalis-mute);
+}
+
+.journal-coming__title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--regalis-ink);
+  margin-bottom: 12px;
+}
+
+.journal-coming__desc {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+/* Planned articles */
+.planned-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--regalis-line);
+  margin-top: 32px;
+}
+
+@media (max-width: 640px) {
+  .planned-grid { grid-template-columns: 1fr; }
+}
+
+.planned-card {
+  background: var(--bg-base);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.planned-card__cat {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--regalis-gold);
+}
+
+.planned-card__title {
+  font-size: 14px;
+  color: var(--regalis-ink);
+  line-height: 1.65;
+}
+
+.planned-card__status {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--regalis-mute);
+  margin-top: 4px;
+}
+</style>
+
+<!-- Breadcrumb -->
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>Journal</span>
+</nav>
+
+<!-- Hero -->
+<div class="journal-hero">
+  <div class="journal-hero__inner">
+    <p class="corp-kicker corp-reveal">Regalis Journal</p>
+    <h1 class="corp-h2--light corp-reveal" style="--d:0.06s; font-size:clamp(32px,5vw,56px);">
+      機会を建築するための知見を、届ける。
+    </h1>
+    <p class="corp-reveal" style="--d:0.1s; font-size:15px; color:rgba(247,244,236,0.5); margin-top:16px; line-height:2;">
+      AI & DX / Founder's Voice / Student & Next Gen / Case Study の4カテゴリで発信中。
+    </p>
+  </div>
+</div>
+
+<!-- Category bar -->
+<div class="journal-cat-bar">
+  <button class="journal-cat-btn is-active" type="button">All</button>
+  <button class="journal-cat-btn" type="button">AI & DX</button>
+  <button class="journal-cat-btn" type="button">Founder's Voice</button>
+  <button class="journal-cat-btn" type="button">Student & Next Gen</button>
+  <button class="journal-cat-btn" type="button">Case Study</button>
+</div>
+
+<!-- Articles / Coming Soon -->
+<div class="journal-index">
+
+  <div class="journal-coming corp-reveal">
+    <h2 class="journal-coming__title">準備中</h2>
+    <p class="journal-coming__desc">
+      Journalは現在準備中です。<br>
+      メルマガ登録をいただくと、公開時に真っ先にお届けします。
+    </p>
+    <a href="{{ '/contact/' | relative_url }}" class="corp-btn corp-btn--gold">メルマガ登録 →</a>
+  </div>
+
+  <div style="margin-top:64px;">
+    <p class="corp-kicker corp-reveal">Coming Soon</p>
+    <h3 class="corp-h3 corp-reveal" style="--d:0.06s; margin-bottom:24px;">公開予定の記事</h3>
+
+    <div class="planned-grid corp-stagger">
+      <div class="planned-card">
+        <span class="planned-card__cat">AI & DX</span>
+        <span class="planned-card__title">中小企業が生成AIで最初に自動化すべき3業務</span>
+        <span class="planned-card__status">執筆中</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-card__cat">AI & DX</span>
+        <span class="planned-card__title">IT導入補助金2026年版 完全ガイド</span>
+        <span class="planned-card__status">執筆中</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-card__cat">Founder's Voice</span>
+        <span class="planned-card__title">12年間学校に行かなかった僕が「機会建築家」を名乗る理由</span>
+        <span class="planned-card__status">執筆中</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-card__cat">Founder's Voice</span>
+        <span class="planned-card__title">Google AI第一期アンバサダーから見た日本のAI普及の現在地</span>
+        <span class="planned-card__status">執筆予定</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-card__cat">Student & Next Gen</span>
+        <span class="planned-card__title">学生アンバサダー制度はなぜ今、企業に必要なのか</span>
+        <span class="planned-card__status">執筆予定</span>
+      </div>
+      <div class="planned-card">
+        <span class="planned-card__cat">Case Study</span>
+        <span class="planned-card__title">PR業界での生成AI採用業務自動化 — 1日100人のスカウト文生成</span>
+        <span class="planned-card__status">執筆予定</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div style="background:var(--bg-ivory); padding:64px var(--section-px); text-align:center; border-top:0.5px solid var(--regalis-line);">
+  <p class="corp-kicker corp-reveal">Newsletter</p>
+  <h3 class="corp-h3 corp-reveal" style="--d:0.06s; margin-bottom:8px;">Regalis Insight</h3>
+  <p class="corp-reveal" style="--d:0.1s; font-size:14px; color:var(--regalis-mute); margin-bottom:32px;">
+    週に一度、機会の設計図を届ける無料ニュースレター。
+  </p>
+  <form action="https://formspree.io/f/mvgvdaee"
+        method="POST"
+        style="display:flex; gap:0; max-width:400px; margin:0 auto;"
+        class="corp-reveal" style="--d:0.14s">
+    <input type="hidden" name="purpose" value="newsletter">
+    <input type="text" name="_gotcha" style="display:none">
+    <input class="newsletter-strip__input" type="email" name="email" required placeholder="your@email.com" aria-label="メールアドレス">
+    <button class="newsletter-strip__btn" type="submit">登録 →</button>
+  </form>
+</div>

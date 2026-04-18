@@ -1,0 +1,354 @@
+---
+layout: corp
+title: "代表紹介"
+meta_title: "井上 幹太 Kanta Inoue | Regalis Japan Group"
+description: "Regalis Japan Group代表取締役・井上幹太（Kanta Inoue）のプロフィール。12年の不登校から14歳でWebライター独立、Google AI第一期アンバサダーを経て20歳でグループ会社設立。機会建築家の軌跡。"
+jsonld: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "井上 幹太",
+      "alternateName": "Kanta Inoue",
+      "jobTitle": "代表取締役社長 / Opportunity Architect",
+      "description": "12年の不登校、14歳でのWebライター独立、Google AI第一期アンバサダーを経て、20歳でRegalis Japan Groupを設立。",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Regalis Japan Group 株式会社"
+      },
+      "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "N高等学校" },
+        { "@type": "EducationalOrganization", "name": "ZEN大学" },
+        { "@type": "EducationalOrganization", "name": "Aalto University Executive Education" }
+      ],
+      "knowsAbout": ["人工知能", "DXコンサルティング", "金融教育", "学生支援", "起業"],
+      "affiliation": [
+        { "@type": "Organization", "name": "TIESBRICK" },
+        { "@type": "Organization", "name": "Google AI Ambassador" }
+      ]
+    }
+  }
+  </script>
+---
+
+<style>
+/* ── Founder page styles ─── */
+
+.founder-hero {
+  background: var(--regalis-ink);
+  color: #F7F4EC;
+  padding: 120px var(--section-px) 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-hero__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 80px;
+  align-items: end;
+}
+
+@media (max-width: 900px) {
+  .founder-hero__inner { grid-template-columns: 1fr; }
+  .founder-hero__photo { max-width: 280px; }
+}
+
+.founder-hero__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--regalis-gold);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.founder-hero__name {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.founder-hero__position {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(247,244,236,0.45);
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.founder-hero__lead {
+  font-size: 15px;
+  color: rgba(247,244,236,0.65);
+  line-height: 2;
+  max-width: 480px;
+  border-left: 0.5px solid rgba(201,162,75,0.3);
+  padding-left: 24px;
+}
+
+.founder-hero__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
+  border: 0.5px solid rgba(201,162,75,0.2);
+}
+
+/* Philosophy */
+.founder-philosophy {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+  padding: var(--section-py) var(--section-px);
+}
+
+.founder-philosophy__text {
+  font-size: 16px;
+  line-height: 2.2;
+  color: var(--regalis-ink);
+  border-left: 0.5px solid var(--regalis-line);
+  padding-left: 32px;
+}
+
+.founder-philosophy__text p + p { margin-top: 24px; }
+
+/* Timeline */
+.founder-timeline {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+  padding: 0 var(--section-px) var(--section-py);
+}
+
+/* Media */
+.founder-media {
+  background: var(--bg-ivory);
+  padding: var(--section-py) var(--section-px);
+  border-top: 0.5px solid var(--regalis-line);
+}
+
+.founder-media__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.founder-media-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 32px;
+}
+
+.founder-media-table tr {
+  border-bottom: 0.5px solid var(--regalis-line);
+}
+
+.founder-media-table td {
+  padding: 16px 0;
+  font-size: 13px;
+  color: var(--regalis-ink);
+  vertical-align: top;
+}
+
+.founder-media-table td:first-child {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--regalis-mute);
+  width: 120px;
+  padding-right: 24px;
+}
+</style>
+
+<!-- Breadcrumb -->
+<nav class="corp-breadcrumb" aria-label="パンくずリスト">
+  <a href="{{ '/' | relative_url }}">Top</a>
+  <span class="corp-breadcrumb__sep">/</span>
+  <span>Founder</span>
+</nav>
+
+<!-- Hero -->
+<section class="founder-hero">
+  <div class="founder-hero__inner">
+    <div>
+      <span class="founder-hero__label corp-reveal">Opportunity Architect</span>
+      <h1 class="founder-hero__name corp-reveal" style="--d:0.05s">
+        井上 幹太<br>
+        <span style="font-size:0.55em; opacity:0.4; letter-spacing:0.05em;">Kanta Inoue</span>
+      </h1>
+      <p class="founder-hero__position corp-reveal" style="--d:0.1s">
+        代表取締役社長 &middot; Regalis Japan Group
+      </p>
+      <p class="founder-hero__lead corp-reveal" style="--d:0.14s">
+        12年間、私は学校に通わなかった。<br>
+        境界の外にいた12年が、いま、<br>
+        他者のための機会を設計する力になっている。
+      </p>
+    </div>
+    <img src="{{ '/images/【顔写真】井上幹太_スイス国連.jpg' | relative_url }}"
+         alt="代表取締役 井上幹太"
+         class="founder-hero__photo corp-reveal"
+         style="--d:0.08s"
+         width="380" height="507"
+         loading="eager">
+  </div>
+</section>
+
+<!-- Philosophy -->
+<section aria-labelledby="philosophy-heading">
+  <div class="founder-philosophy">
+    <p class="corp-kicker corp-reveal">Philosophy</p>
+    <h2 class="corp-h2 corp-reveal" id="philosophy-heading" style="--d:0.06s; margin-bottom:40px;">なぜ機会建築家なのか</h2>
+
+    <div class="founder-philosophy__text corp-reveal" style="--d:0.1s">
+      <p>
+        機会は、生まれながらに与えられるものではない。設計されるものだ。
+        私が12年間、学校という場の外に居続けたのは、逃げではなく、既存の設計図への疑問だった。
+      </p>
+      <p>
+        14歳でWebライターとして独立したとき、学んだのは「動けば機会が生まれる」という単純な事実だ。
+        誰かが設計した場で待つのではなく、自分で場を設計する。その行為を、私は「機会建築」と呼んでいる。
+      </p>
+      <p>
+        今、私がやっていることはすべてその延長線上にある。
+        PRASISでは企業が見えていない機会をAIで実装する。ACADEMIAでは学生が踏み出すための場を建築する。
+        ORATIOでは、言葉で他者の中に「可能性の地図」を書く。
+      </p>
+      <p>
+        境界は、超えるためにある。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Full Timeline -->
+<section aria-labelledby="timeline-heading">
+  <div class="founder-timeline">
+    <div style="border-bottom:0.5px solid var(--regalis-line); padding-bottom:24px; margin-bottom:48px;">
+      <p class="corp-kicker corp-reveal">Timeline</p>
+      <h2 class="corp-h2 corp-reveal" id="timeline-heading" style="--d:0.06s;">軌跡</h2>
+    </div>
+
+    <div class="corp-timeline">
+
+      <div class="corp-timeline-item corp-reveal">
+        <div class="corp-timeline-item__year">2005年 — 誕生</div>
+        <div class="corp-timeline-item__title">大阪生まれ</div>
+        <div class="corp-timeline-item__body">後に「機会建築家」となる軌跡の起点。</div>
+      </div>
+
+      <div class="corp-timeline-item corp-reveal" style="--d:0.05s">
+        <div class="corp-timeline-item__year">小学校 — 中学校（12年）</div>
+        <div class="corp-timeline-item__title">不登校</div>
+        <div class="corp-timeline-item__body">
+          既存の学校制度の外で12年を過ごす。この期間に独学でWebライティング・金融・経済学を習得。
+        </div>
+      </div>
+
+      <div class="corp-timeline-item corp-reveal" style="--d:0.08s">
+        <div class="corp-timeline-item__year">14歳</div>
+        <div class="corp-timeline-item__title">独立系Webライターとして経済的自立</div>
+        <div class="corp-timeline-item__body">
+          クラウドソーシングを起点にWebライターとして活動開始。月収を安定させ、経済的に自立。
+        </div>
+      </div>
+
+      <div class="corp-timeline-item corp-reveal" style="--d:0.1s">
+        <div class="corp-timeline-item__year">高校時代</div>
+        <div class="corp-timeline-item__title">S高等学校 入学 — 国際経済オリンピック 3位</div>
+        <div class="corp-timeline-item__body">
+          角川ドワンゴ学園N高グループ・S高等学校に入学。金融経済研究部・投資部・政治部に所属。
+          国際経済学オリンピック日本代表選考 全国大会 ケース部門 3位。
+          J-StarX Finland（経産省）第1期採択、フィンランド・Aalto University Executive Educationで学ぶ。
+        </div>
+      </div>
+
+      <div class="corp-timeline-item corp-reveal" style="--d:0.12s">
+        <div class="corp-timeline-item__year">2023年〜2024年</div>
+        <div class="corp-timeline-item__title">学生団体3つを創業 / 複数インターン</div>
+        <div class="corp-timeline-item__body">
+          FIN/School.、ESF、UNIONの3学生団体を創業。
+          TERRAISE COO、renue、つくるAI、アンティルでインターンを経験。
+        </div>
+      </div>
+
+      <div class="corp-timeline-item corp-reveal" style="--d:0.14s">
+        <div class="corp-timeline-item__year">2024年 — 19歳</div>
+        <div class="corp-timeline-item__title">Google AI Ambassador 第一期 選出</div>
+        <div class="corp-timeline-item__body">
+          Google AI Ambassador 第一期として選出。UT-LAB公認アンバサダー、Taskhub公認アンバサダー、積水ハウスアンバサダーにも選出。
+        </div>
+      </div>
+
+      <div class="corp-timeline-item corp-reveal" style="--d:0.16s">
+        <div class="corp-timeline-item__year">2025年11月 — 20歳</div>
+        <div class="corp-timeline-item__title">Regalis Japan Group 株式会社 設立 · 代表取締役就任</div>
+        <div class="corp-timeline-item__body">
+          AI/DXコンサル（PRAXIS）・学生機会創出（ACADEMIA）・代表発信（ORATIO）の3事業を軸にグループ会社を設立。
+        </div>
+      </div>
+
+      <div class="corp-timeline-item corp-timeline-item--current corp-reveal" style="--d:0.18s">
+        <div class="corp-timeline-item__year">現在</div>
+        <div class="corp-timeline-item__title">ZEN大学 知能情報社会学部 特待生 / TIESBRICK所属タレント</div>
+        <div class="corp-timeline-item__body">
+          ZEN大学 特待生として在籍。すずかんゼミ（STO・AI研究）に参加。
+          TIESBRICK所属タレントとして講演・メディア出演を行う。
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Media Appearances -->
+<section class="founder-media" aria-labelledby="media-heading">
+  <div class="founder-media__inner">
+    <p class="corp-kicker corp-reveal">Media & Speaking</p>
+    <h2 class="corp-h2 corp-reveal" id="media-heading" style="--d:0.06s;">メディア出演・登壇実績</h2>
+
+    <table class="founder-media-table corp-reveal" style="--d:0.1s">
+      <tbody>
+        <tr>
+          <td>2025年〜</td>
+          <td>TIESBRICK 所属タレント / 講演・登壇活動</td>
+        </tr>
+        <tr>
+          <td>2024年</td>
+          <td>Google AI Ambassador 第一期 — AI活用に関する講演・発信活動</td>
+        </tr>
+        <tr>
+          <td>2024年</td>
+          <td>J-StarX Finland（経産省）― フィンランド・Aalto University での発表</td>
+        </tr>
+        <tr>
+          <td>随時</td>
+          <td>YouTube「挑戦を文化に」— AI・起業・教育をテーマに発信中</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:13px; color:var(--regalis-mute); margin-top:24px; line-height:1.8;">
+      詳細な出演歴・登壇実績は、取材・講演依頼時にご提供いたします。
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="corp-cta-block corp-cta-block--ink">
+  <p class="corp-kicker" style="color:var(--regalis-gold);">Oratio</p>
+  <h2 class="corp-cta-block__title corp-reveal">取材・講演のご依頼はこちら</h2>
+  <p class="corp-cta-block__subtitle corp-reveal" style="--d:0.06s;">
+    「不登校×AI×起業」の文脈から語る、唯一の経営者。<br>
+    メディア取材・講演・インタビュー・出演依頼をお待ちしております。
+  </p>
+  <div class="corp-cta-block__actions corp-reveal" style="--d:0.1s">
+    <a href="{{ '/contact/?type=oratio' | relative_url }}" class="corp-btn corp-btn--ghost">取材・講演を依頼する →</a>
+    <a href="{{ '/business/oratio/' | relative_url }}" class="corp-btn" style="background:transparent; color:rgba(247,244,236,0.35); border:none; font-family:var(--font-mono); font-size:11px; letter-spacing:0.2em; text-transform:uppercase;">ORATIO を見る →</a>
+  </div>
+</div>
