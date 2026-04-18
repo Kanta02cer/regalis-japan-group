@@ -528,6 +528,494 @@ jsonld: |
   </p>
 </div>
 
+<!-- ═══════════════════════════ REGALIS CIRCLE MODAL ════════════ -->
+<div id="regalis-circle-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="circle-modal-title">
+  <div id="regalis-circle-modal">
+
+    <button id="regalis-circle-close" aria-label="閉じる">&times;</button>
+
+    <div class="rcm-left">
+      <p class="rcm-label">Invitation</p>
+      <h2 class="rcm-title" id="circle-modal-title">
+        Regalis<br>
+        <em>Circle</em>
+      </h2>
+      <p class="rcm-sub">会員限定特典</p>
+
+      <ul class="rcm-benefits">
+        <li>
+          <span class="rcm-benefit__num">01</span>
+          <div>
+            <div class="rcm-benefit__title">無料オーダースーツ採寸</div>
+            <div class="rcm-benefit__desc">Regalis Atelierにて、採寸・素材相談を無料でご提供。</div>
+          </div>
+        </li>
+        <li>
+          <span class="rcm-benefit__num">02</span>
+          <div>
+            <div class="rcm-benefit__title">四ツ谷 CROSSONE ラウンジご招待</div>
+            <div class="rcm-benefit__desc">月1回、代表・役員とのラウンジ交流会にご招待。</div>
+          </div>
+        </li>
+        <li>
+          <span class="rcm-benefit__num">03</span>
+          <div>
+            <div class="rcm-benefit__title">週刊 Regalis Insight</div>
+            <div class="rcm-benefit__desc">AI・DX・起業・機会設計の知見を毎週お届け。</div>
+          </div>
+        </li>
+        <li>
+          <span class="rcm-benefit__num">04</span>
+          <div>
+            <div class="rcm-benefit__title">AI/DX 無料診断（30分）</div>
+            <div class="rcm-benefit__desc">PRAXIS担当による業務課題ヒアリング・AI活用提案。</div>
+          </div>
+        </li>
+        <li>
+          <span class="rcm-benefit__num">05</span>
+          <div>
+            <div class="rcm-benefit__title">セミナー・登壇への先行招待</div>
+            <div class="rcm-benefit__desc">代表・井上幹太の講演・ウェビナーを優先案内。</div>
+          </div>
+        </li>
+      </ul>
+
+      <p class="rcm-note">入会費・年会費は無料です。</p>
+    </div>
+
+    <div class="rcm-right">
+      <p class="rcm-form-lead">
+        以下をご入力いただくと、担当者より<br>
+        2営業日以内にご連絡いたします。
+      </p>
+
+      <form id="regalis-circle-form"
+            action="https://formspree.io/f/mvgvdaee"
+            method="POST"
+            novalidate>
+        <input type="hidden" name="purpose" value="regalis-circle">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1">
+
+        <div class="rcm-field">
+          <label class="rcm-field__label" for="rc-name">
+            お名前 <span aria-label="必須">*</span>
+          </label>
+          <input class="rcm-field__input"
+                 type="text"
+                 id="rc-name"
+                 name="name"
+                 required
+                 placeholder="山田 太郎"
+                 autocomplete="name">
+        </div>
+
+        <div class="rcm-field">
+          <label class="rcm-field__label" for="rc-affiliation">
+            ご所属 <span aria-label="必須">*</span>
+          </label>
+          <input class="rcm-field__input"
+                 type="text"
+                 id="rc-affiliation"
+                 name="affiliation"
+                 required
+                 placeholder="株式会社〇〇 / 個人"
+                 autocomplete="organization">
+        </div>
+
+        <div class="rcm-field">
+          <label class="rcm-field__label" for="rc-email">
+            メールアドレス <span aria-label="必須">*</span>
+          </label>
+          <input class="rcm-field__input"
+                 type="email"
+                 id="rc-email"
+                 name="email"
+                 required
+                 placeholder="your@email.com"
+                 autocomplete="email">
+        </div>
+
+        <div class="rcm-field">
+          <label class="rcm-field__label" for="rc-phone">
+            電話番号 <span aria-label="必須">*</span>
+          </label>
+          <input class="rcm-field__input"
+                 type="tel"
+                 id="rc-phone"
+                 name="phone"
+                 required
+                 placeholder="090-0000-0000"
+                 autocomplete="tel">
+        </div>
+
+        <p id="rcm-error" class="rcm-error" hidden>
+          すべての項目をご入力ください。
+        </p>
+
+        <button class="rcm-submit" type="submit">
+          Regalis Circle に参加する →
+        </button>
+
+        <p class="rcm-privacy">
+          <a href="{{ '/privacy.html' | relative_url }}" target="_blank" rel="noopener">
+            プライバシーポリシー
+          </a>に同意の上、送信します。
+        </p>
+      </form>
+
+      <div id="rcm-thanks" hidden>
+        <p class="rcm-thanks__title">ありがとうございます。</p>
+        <p class="rcm-thanks__body">
+          2営業日以内に担当者よりご連絡いたします。<br>
+          Regalis Circleへようこそ。
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ── Regalis Circle Modal ── */
+#regalis-circle-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 15, 15, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+#regalis-circle-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#regalis-circle-modal {
+  background: var(--bg-base);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.5s var(--ease-out);
+}
+
+#regalis-circle-backdrop.is-open #regalis-circle-modal {
+  transform: translateY(0);
+}
+
+#regalis-circle-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: var(--regalis-warm-gray);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  transition: color 0.2s;
+  z-index: 2;
+}
+
+#regalis-circle-close:hover { color: var(--regalis-ink); }
+
+/* Left panel */
+.rcm-left {
+  background: var(--regalis-ink);
+  padding: 48px 40px;
+  color: #F7F4EC;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.rcm-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--regalis-gold);
+  margin-bottom: 16px;
+}
+
+.rcm-title {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 4px;
+}
+
+.rcm-title em {
+  font-style: italic;
+  color: var(--regalis-gold);
+}
+
+.rcm-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: rgba(247,244,236,0.35);
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 0.5px solid rgba(201,162,75,0.2);
+}
+
+.rcm-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.rcm-benefits li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.rcm-benefit__num {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--regalis-gold);
+  opacity: 0.5;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.rcm-benefit__title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #F7F4EC;
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+
+.rcm-benefit__desc {
+  font-size: 12px;
+  color: rgba(247,244,236,0.45);
+  line-height: 1.6;
+}
+
+.rcm-note {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: rgba(247,244,236,0.25);
+  border-top: 0.5px solid rgba(201,162,75,0.15);
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+/* Right panel */
+.rcm-right {
+  padding: 48px 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rcm-form-lead {
+  font-size: 13px;
+  color: var(--regalis-mute);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 0.5px solid var(--regalis-line);
+}
+
+.rcm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.rcm-field__label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--regalis-warm-gray);
+}
+
+.rcm-field__label span { color: var(--regalis-gold); margin-left: 4px; }
+
+.rcm-field__input {
+  padding: 11px 14px;
+  border: 0.5px solid rgba(15,15,15,0.15);
+  font-family: var(--font-body-jp);
+  font-size: 14px;
+  color: var(--regalis-ink);
+  background: var(--bg-base);
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.rcm-field__input:focus { border-color: var(--regalis-gold); }
+.rcm-field__input.is-invalid { border-color: #B03030; }
+
+.rcm-error {
+  font-size: 12px;
+  color: #B03030;
+  margin-bottom: 8px;
+}
+
+.rcm-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--regalis-gold);
+  color: #fff;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.rcm-submit:hover { background: var(--regalis-dark-gold); }
+
+.rcm-privacy {
+  font-size: 11px;
+  color: var(--regalis-mute);
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.rcm-privacy a { color: var(--regalis-gold); }
+
+.rcm-thanks__title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--regalis-ink);
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+
+.rcm-thanks__body {
+  font-size: 14px;
+  color: var(--regalis-mute);
+  line-height: 2;
+}
+
+@media (max-width: 700px) {
+  #regalis-circle-modal {
+    grid-template-columns: 1fr;
+    max-height: 95vh;
+  }
+  .rcm-left { padding: 36px 28px; }
+  .rcm-title { font-size: 36px; }
+  .rcm-right { padding: 32px 28px 36px; }
+}
+</style>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'rjg_circle_shown';
+  var backdrop = document.getElementById('regalis-circle-backdrop');
+  var closeBtn = document.getElementById('regalis-circle-close');
+  var form = document.getElementById('regalis-circle-form');
+  var thanks = document.getElementById('rcm-thanks');
+  var errorMsg = document.getElementById('rcm-error');
+
+  function openModal() {
+    backdrop.classList.add('is-open');
+    backdrop.removeAttribute('aria-hidden');
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    backdrop.classList.remove('is-open');
+    backdrop.setAttribute('aria-hidden', 'true');
+    try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+  }
+
+  // Show after 1.5 s, once per session
+  var alreadyShown = false;
+  try { alreadyShown = !!sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+
+  if (!alreadyShown) {
+    setTimeout(openModal, 1500);
+  }
+
+  // Close on button / backdrop click
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', function (e) {
+    if (e.target === backdrop) closeModal();
+  });
+
+  // Esc key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // Form submit
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Simple validation
+    var inputs = form.querySelectorAll('[required]');
+    var valid = true;
+    inputs.forEach(function (inp) {
+      inp.classList.remove('is-invalid');
+      if (!inp.value.trim()) {
+        inp.classList.add('is-invalid');
+        valid = false;
+      }
+    });
+
+    if (!valid) {
+      errorMsg.hidden = false;
+      return;
+    }
+
+    errorMsg.hidden = true;
+
+    var data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function (res) {
+      if (res.ok) {
+        form.hidden = true;
+        thanks.hidden = false;
+        try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+        setTimeout(closeModal, 4000);
+      } else {
+        errorMsg.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+        errorMsg.hidden = false;
+      }
+    }).catch(function () {
+      errorMsg.textContent = '通信エラーが発生しました。';
+      errorMsg.hidden = false;
+    });
+  });
+})();
+</script>
+
 <!-- ═══════════════════════════ 7. INQUIRE ═══════════════════════ -->
 <div class="home-inquire">
   <p class="corp-kicker" style="color:var(--regalis-gold);">Contact</p>
